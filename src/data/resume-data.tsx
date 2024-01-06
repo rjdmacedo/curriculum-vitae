@@ -28,7 +28,7 @@ export const RESUME_DATA = {
     "Frontend Engineer focused on building products with extra attention to detail",
   summary:
     "As a Frontend Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
+  avatarUrl: "https://avatars.githubusercontent.com/u/16735002?v=4",
   personalWebsiteUrl: "https://jarocki.me",
   contact: {
     email: "rafaelmacedo4@gmail.com",
@@ -41,12 +41,12 @@ export const RESUME_DATA = {
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/rafaelmacedo/",
+        url: "https://www.linkedin.com/in/rjdmacedo/",
         icon: LinkedInIcon,
       },
       {
         name: "X",
-        url: "https://x.com/rjdmacedo",
+        url: "https://x.com/rafaeljdm",
         icon: XIcon,
       },
     ],
