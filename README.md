@@ -1,86 +1,67 @@
-# React + Vite + TypeScript Template (react-vite-ui)
+![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Dan5py/react-vite-ui/blob/main/LICENSE)
+# Minimalist CV
 
-A React + Vite template powered by shadcn/ui.
+Simple web app that renders minimalist CV with print-friendly layout.
 
-## 🎉 Features
+Built with Next.js and shadcn/ui, deployed on Vercel.
 
-- **React** - A JavaScript library for building user interfaces.
-- **Vite** - A fast, opinionated frontend build tool.
-- **TypeScript** - A typed superset of JavaScript that compiles to plain JavaScript.
-- **Tailwind CSS** - A utility-first CSS framework.
-- **Tailwind Prettier Plugin** - A Prettier plugin for formatting Tailwind CSS classes.
-- **ESLint** - A pluggable linting utility for JavaScript and TypeScript.
-- **PostCSS** - A tool for transforming CSS with JavaScript.
-- **Autoprefixer** - A PostCSS plugin to parse CSS and add vendor prefixes.
-- **shadcn/ui** - Beautifully designed components that you can copy and paste into your apps.
+# Features
 
-## ⚙️ Prerequisites
+- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
+- Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
+- Auto generated Layout
+- Responsive for different devices
+- Optimized for Next.js and Vercel
 
-Make sure you have the following installed on your development machine:
+# Getting Started Locally
 
-- Node.js (version 16 or above)
-- pnpm (package manager)
-
-## 🚀 Getting Started
-
-Follow these steps to get started with the react-vite-ui template:
-
-1. Clone the repository:
+1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/dan5py/react-vite-ui.git
+   git clone https://github.com/BartoszJarocki/cv.git
    ```
 
-2. Navigate to the project directory:
+2. Move to the cloned directory
 
    ```bash
-   cd react-vite-ui
+   cd cv
    ```
 
-3. Install the dependencies:
+3. Install dependencies:
 
    ```bash
-   pnpm install
+   yarn install
    ```
 
-4. Start the development server:
+4. Start the local Server:
 
    ```bash
-   pnpm dev
+   yarn dev
    ```
 
-## 📜 Available Scripts
+5. Open the [Config file](./src/data/resume-data.tsx) and make changes
 
-- pnpm dev - Starts the development server.
-- pnpm build - Builds the production-ready code.
-- pnpm lint - Runs ESLint to analyze and lint the code.
-- pnpm preview - Starts the Vite development server in preview mode.
+# Run with Docker
 
-## 📂 Project Structure
+Build the containewr
 
-The project structure follows a standard React application layout:
-
-```python
-react-vite-ui/
-  ├── node_modules/      # Project dependencies
-  ├── public/            # Public assets
-  ├── src/               # Application source code
-  │   ├── components/    # React components
-  │   │   └── ui/        # shadc/ui components
-  │   ├── styles/        # CSS stylesheets
-  │   ├── lib/           # Utility functions
-  │   ├── App.tsx        # Application entry point
-  │   └── index.tsx      # Main rendering file
-  ├── .eslintrc.json     # ESLint configuration
-  ├── index.html         # HTML entry point
-  ├── postcss.config.js  # PostCSS configuration
-  ├── tailwind.config.js # Tailwind CSS configuration
-  ├── tsconfig.json      # TypeScript configuration
-  └── vite.config.ts     # Vite configuration
+```
+docker compose build
 ```
 
-## 📄 License
+Run the container
 
-This project is licensed under the MIT License. See the [LICENSE](https://choosealicense.com/licenses/mit/) file for details.
+```
+docker compose up -d
+```
+
+Stop the Container
+
+```
+docker compose down 
+```
+
+# License
+
+[MIT](https://choosealicense.com/licenses/mit/)
