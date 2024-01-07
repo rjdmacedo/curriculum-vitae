@@ -1,8 +1,8 @@
 import ConsultlyLogo from "./consultly.svg";
 import AmbitLogo from "./ambit.png";
+import PolygonLogo from "./polygon.jpeg";
 import BarepapersLogo from "./barepapers.svg";
 import BimLogo from "./bim.png";
-import CDGOLogo from "./cdgo.png";
 import ClevertechLogo from "./clevertech.png";
 import EvercastLogo from "./evercast.svg";
 import Howdy from "./howdy.png";
@@ -15,13 +15,15 @@ import ParabolLogo from "./parabol.svg";
 import TastyCloudLogo from "./tastycloud.png";
 import YearProgressLogo from "./yearprogress.svg";
 import Minimal from "./minimal.svg";
+import SIIOPLogo from "./SIIOP.jpg";
 
 export {
+  PolygonLogo,
+  SIIOPLogo,
   ConsultlyLogo,
   AmbitLogo,
   BarepapersLogo,
   BimLogo,
-  CDGOLogo,
   ClevertechLogo,
   EvercastLogo,
   Howdy,
