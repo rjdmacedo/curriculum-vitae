@@ -1,12 +1,7 @@
-import {
-  SIIOPLogo,
-  PolygonLogo,
-  ClevertechLogo,
-  JojoMobileLogo,
-  NSNLogo,
-  ParabolLogo,
-} from "@/images/logos";
+import { SIIOPLogo, PolygonLogo } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+
+const now = new Date().getFullYear();
 
 export const RESUME_DATA = {
   name: "Rafael Macedo",
@@ -34,7 +29,7 @@ export const RESUME_DATA = {
         icon: LinkedInIcon,
       },
       {
-        name: "X",
+        name: "X (formerly Twitter)",
         url: "https://x.com/rafaeljdm",
         icon: XIcon,
       },
@@ -54,9 +49,8 @@ export const RESUME_DATA = {
       link: "https://wella.com",
       badges: ["Remote"],
       title: "Senior Frontend Engineer",
-      logo: ParabolLogo,
       start: "2023",
-      end: "2023",
+      end: now.toString(),
       description:
         "Developing and maintaining critical components of a digital solutions platform for Wella, a prominent beauty company, using React and Node.js. Collaborating with cross-functional teams, including product managers, designers, and backend engineers, to translate business requirements into technical solutions. Employing React and Node.js to construct responsive and scalable web applications, following best practices and coding standards. Taking the lead in integrating various third-party APIs and services to enhance functionality and user experience on the digital solutions platform. Mentoring junior developers and actively participating in Agile development processes, including sprint planning, daily stand-ups, and retrospectives. Conducting thorough code reviews, providing constructive feedback, and ensuring high code quality and adherence to coding standards.",
     },
@@ -65,7 +59,6 @@ export const RESUME_DATA = {
       link: "https://vuestorefront.io",
       badges: ["Remote"],
       title: "Senior Frontend Engineer",
-      logo: ParabolLogo,
       start: "2022",
       end: "2023",
       description:
@@ -76,7 +69,6 @@ export const RESUME_DATA = {
       link: "https://creoate.com",
       badges: ["Remote"],
       title: "Senior Software Engineer",
-      logo: ClevertechLogo,
       start: "2021",
       end: "2022",
       description:
@@ -87,7 +79,6 @@ export const RESUME_DATA = {
       link: "https://farfetch.com/",
       badges: [],
       title: "Senior Software Engineer",
-      logo: JojoMobileLogo,
       start: "2018",
       end: "2021",
       description:
@@ -98,7 +89,6 @@ export const RESUME_DATA = {
       link: "https://biometrid.com/",
       badges: ["Hybrid"],
       title: "Senior Software Engineer",
-      logo: NSNLogo,
       start: "2018",
       end: "2019",
       description:
@@ -109,7 +99,6 @@ export const RESUME_DATA = {
       link: "https://www.alter-solutions.pt/",
       badges: [],
       title: "Software Engineer",
-      logo: NSNLogo,
       start: "2016",
       end: "2018",
       description:
@@ -117,22 +106,44 @@ export const RESUME_DATA = {
     },
   ],
   skills: [
+    "SEO",
+    "Jest",
+    "Remix",
+    "React",
+    "Prisma",
+    "Vue.js",
+    "Node.js",
+    "Next.js",
+    "Nuxt.js",
+    "GraphQL",
+    "Vuetify",
+    "Laravel",
+    "Shopify",
+    "HTML/CSS",
+    "REST API",
     "JavaScript",
     "TypeScript",
-    "React/Next.js/Remix",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "WebRTC",
+    "Ant Design",
+    "Material UI",
+    "Tailwind CSS",
+    "React Router",
+    "React Context",
+    "Apollo GraphQL",
+    "Design Patterns",
+    "React Hook Form",
+    "Apollo Federation",
+    "Styled Components",
+    "Gateway Integration",
+    "Frontend Development",
   ],
   projects: [
     {
       title: "Headless SDK",
       techStack: [
-        "Senior Engineer",
-        "JavaScript",
         "Node",
         "GraphQL",
+        "JavaScript",
+        "Senior Engineer",
         "Apollo Federation",
       ],
       description:
