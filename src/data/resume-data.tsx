@@ -154,6 +154,10 @@ export const RESUME_DATA = {
     {
       title: "Biometrid SDK",
       techStack: ["Lead Engineer", "JavaScript", "TypeScript", "Nest.js"],
+      link: {
+        label: "Biometrid",
+        href: "https://biometrid.com",
+      },
       description:
         "Biometrid is a platform that allows you to verify your identity using your face, voice, and ID card. This project was built from scratch and is currently in production.",
       logo: PolygonLogo,
