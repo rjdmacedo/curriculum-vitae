@@ -55,8 +55,8 @@ export const RESUME_DATA = {
         "Developing and maintaining critical components of a digital solutions platform for Wella, a prominent beauty company, using React and Node.js. Collaborating with cross-functional teams, including product managers, designers, and backend engineers, to translate business requirements into technical solutions. Employing React and Node.js to construct responsive and scalable web applications, following best practices and coding standards. Taking the lead in integrating various third-party APIs and services to enhance functionality and user experience on the digital solutions platform. Mentoring junior developers and actively participating in Agile development processes, including sprint planning, daily stand-ups, and retrospectives. Conducting thorough code reviews, providing constructive feedback, and ensuring high code quality and adherence to coding standards.",
     },
     {
-      company: "Vue Storefront",
-      link: "https://vuestorefront.io",
+      company: "Alokai",
+      link: "https://alokai.com",
       badges: ["Remote"],
       title: "Senior Frontend Engineer",
       start: "2022",
