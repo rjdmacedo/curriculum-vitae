@@ -45,22 +45,12 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "Wella",
-      link: "https://wella.com",
-      badges: ["Remote"],
-      title: "Senior Frontend Engineer",
-      start: "2023",
-      end: now.toString(),
-      description:
-        "Developing and maintaining critical components of a digital solutions platform for Wella, a prominent beauty company, using React and Node.js. Collaborating with cross-functional teams, including product managers, designers, and backend engineers, to translate business requirements into technical solutions. Employing React and Node.js to construct responsive and scalable web applications, following best practices and coding standards. Taking the lead in integrating various third-party APIs and services to enhance functionality and user experience on the digital solutions platform. Mentoring junior developers and actively participating in Agile development processes, including sprint planning, daily stand-ups, and retrospectives. Conducting thorough code reviews, providing constructive feedback, and ensuring high code quality and adherence to coding standards.",
-    },
-    {
       company: "Alokai",
       link: "https://alokai.com",
       badges: ["Remote"],
       title: "Senior Frontend Engineer",
       start: "2022",
-      end: "2023",
+      end: "present",
       description:
         'Developed a store integration using Vue Storefront Core for seamless communication with Elastic Path. Implemented an abstraction layer through composables to simplify interaction complexity and boost developer productivity. Collaborated closely with the Elastic Path Engineering team to overcome technical challenges and ensure a successful integration. Served as a middleware between Vue Storefront and Elastic Path, facilitating data exchange and synchronization. Led the integration project, taking responsibility for delivery and managing stakeholder expectations. Enforced Agile methodologies with well-defined tasks, a groomed backlog, and clear "Definition of Done" and "Definition of Ready" parameters.',
     },
