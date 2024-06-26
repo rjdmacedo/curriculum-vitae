@@ -4,8 +4,8 @@ import PostHog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
 import React from "react";
 
+console.log("Initializing PostHog");
 if (typeof window !== "undefined" && process.env.NEXT_PUBLIC_POSTHOG_KEY) {
-  console.log("Initializing PostHog");
   PostHog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
     api_host:
       process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.i.posthog.com",
@@ -15,6 +15,7 @@ if (typeof window !== "undefined" && process.env.NEXT_PUBLIC_POSTHOG_KEY) {
       if (process.env.NODE_ENV === "development") posthog.debug(); // debug mode in development
     },
   });
+  console.log("PostHog initialized");
 }
 
 export default function AppProviders({
