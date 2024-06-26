@@ -2,6 +2,7 @@
   "name": "curriculum-vitae",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rjdmacedo.github.io/curriculum-vitae/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

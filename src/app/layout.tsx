@@ -2,17 +2,17 @@
 
 import React from "react";
 import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
 
+import { Footer } from "@/components/footer";
 import AppProviders from "@/app/app-providers";
+import { PosthogPageviewTracker } from "@/components/posthog-pageview-tracker";
 
 import "./globals.css";
-import { PosthogPageviewTracker } from "@/components/posthog-pageview-tracker";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
-  subsets: ["latin"],
   display: "swap",
+  subsets: ["latin"],
 });
 
 export default function RootLayout({
@@ -22,11 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <AppProviders>
-        <body>{children}</body>
-        <PosthogPageviewTracker />
-        <Analytics />
-      </AppProviders>
+      <body>
+        <AppProviders>
+          {children}
+          <Footer />
+          <PosthogPageviewTracker />
+        </AppProviders>
+      </body>
     </html>
   );
 }
