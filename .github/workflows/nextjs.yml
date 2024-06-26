@@ -75,7 +75,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Generating build number
         id: build-number
-        run: echo "BUILD_NUMBER=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+        run: echo "BUILD_NUMBER=$(date +%s)" >> $GITHUB_ENV
       - name: Create .env file
         uses: SpicyPizza/create-envfile@v2.0.3
         with:
