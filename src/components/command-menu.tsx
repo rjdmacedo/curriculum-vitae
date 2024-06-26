@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/command";
 import { Button } from "./ui/button";
 import { CommandIcon } from "lucide-react";
-import { NEXT_PUBLIC_BUILD_NUMBER } from "@env";
 
 interface Props {
   links: { url: string; title: string }[];
