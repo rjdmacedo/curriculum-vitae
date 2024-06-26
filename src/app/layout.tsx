@@ -1,9 +1,10 @@
-import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
+import React from "react";
+import {Inter} from "next/font/google";
+import {Analytics} from "@vercel/analytics/react";
+
+import AppProviders from "@/app/app-providers";
 
 import "./globals.css";
-import React from "react";
-
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
@@ -18,8 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body>{children}</body>
-      <Analytics />
+      <AppProviders>
+        <body>{children}</body>
+        <Analytics />
+      </AppProviders>
     </html>
   );
 }

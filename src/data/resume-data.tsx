@@ -1,4 +1,4 @@
-import { SIIOPLogo, PolygonLogo } from "@/images/logos";
+import { PolygonLogo, SIIOPLogo } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 const now = new Date().getFullYear();
@@ -48,21 +48,11 @@ export const RESUME_DATA = {
       company: "Alokai",
       link: "https://alokai.com",
       badges: ["Remote"],
-      title: "Senior Frontend Engineer",
-      start: "2022",
-      end: "present",
-      description:
-        'Developed a store integration using Vue Storefront Core for seamless communication with Elastic Path. Implemented an abstraction layer through composables to simplify interaction complexity and boost developer productivity. Collaborated closely with the Elastic Path Engineering team to overcome technical challenges and ensure a successful integration. Served as a middleware between Vue Storefront and Elastic Path, facilitating data exchange and synchronization. Led the integration project, taking responsibility for delivery and managing stakeholder expectations. Enforced Agile methodologies with well-defined tasks, a groomed backlog, and clear "Definition of Done" and "Definition of Ready" parameters.',
-    },
-    {
-      company: "Creoate",
-      link: "https://creoate.com",
-      badges: ["Remote"],
       title: "Senior Software Engineer",
       start: "2021",
-      end: "2022",
+      end: "Present",
       description:
-        "Contributed to an Agile environment, collaborating with cross-functional teams to deliver high-quality software solutions. Developed applications with Next.js, capitalizing on its server-side rendering and performance optimization features. Utilized Material UI for creating consistent and visually appealing user interfaces. Designed the storefront's frontend architecture to ensure scalability and maintainability. Implemented a GraphQL federated service that orchestrated GraphQL microservices, enhancing communication through Kafka.",
+        'Developed a store integration using Vue Storefront Core for seamless communication with Elastic Path. Implemented an abstraction layer through composables to simplify interaction complexity and boost developer productivity. Collaborated closely with the Elastic Path Engineering team to overcome technical challenges and ensure a successful integration. Served as a middleware between Vue Storefront and Elastic Path, facilitating data exchange and synchronization. Led the integration project, taking responsibility for delivery and managing stakeholder expectations. Enforced Agile methodologies with well-defined tasks, a groomed backlog, and clear "Definition of Done" and "Definition of Ready" parameters.',
     },
     {
       company: "Farfetch",
