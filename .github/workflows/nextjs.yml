@@ -82,6 +82,8 @@ jobs:
           envkey_NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.POSTHOG_KEY }}
           envkey_NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.POSTHOG_HOST }}
           envkey_NEXT_PUBLIC_BUILD_NUMBER: ${{ steps.build-number.outputs.BUILD_NUMBER }}
+      - name: Show .env file
+        run: cat .env
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
