@@ -73,8 +73,11 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Read variables
-        run: echo "NEXT_PUBLIC_POSTHOG_KEY=${{ vars.NEXT_PUBLIC_POSTHOG_KEY }} and NEXT_PUBLIC_POSTHOG_HOST=${{ vars.NEXT_PUBLIC_POSTHOG_HOST }}"
+      - name: Create .env file
+        uses: ozaytsev86/create-env-file-action@v1
+        with:
+          ENV_NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.POSTHOG_KEY }}
+          ENV_NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.POSTHOG_HOST }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
