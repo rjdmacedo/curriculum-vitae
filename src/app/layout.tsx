@@ -3,7 +3,6 @@
 import React from "react";
 import { Inter } from "next/font/google";
 
-import { Footer } from "@/components/footer";
 import AppProviders from "@/app/app-providers";
 import { PosthogPageviewTracker } from "@/components/posthog-pageview-tracker";
 
@@ -25,7 +24,6 @@ export default function RootLayout({
       <body>
         <AppProviders>
           {children}
-          <Footer />
           <PosthogPageviewTracker />
         </AppProviders>
       </body>

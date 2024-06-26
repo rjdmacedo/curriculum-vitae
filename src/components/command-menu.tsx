@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/command";
 import { Button } from "./ui/button";
 import { CommandIcon } from "lucide-react";
+import { NEXT_PUBLIC_BUILD_NUMBER } from "@env";
 
 interface Props {
   links: { url: string; title: string }[];
@@ -67,20 +68,21 @@ export const CommandMenu = ({ links }: Props) => {
             <CommandItem
               onSelect={() => {
                 setOpen(false);
-                PostHog.capture("command_menu_print_clicked");
+                PostHog.capture("command menu print clicked");
                 window.print();
               }}
             >
               <span>Print</span>
             </CommandItem>
           </CommandGroup>
+          <CommandSeparator />
           <CommandGroup heading="Links">
             {links.map(({ url, title }) => (
               <CommandItem
                 key={url}
                 onSelect={() => {
                   setOpen(false);
-                  PostHog.capture("command_menu_link_clicked", { url });
+                  PostHog.capture("command menu link clicked", { url });
                   window.open(url, "_blank");
                 }}
               >
@@ -89,6 +91,7 @@ export const CommandMenu = ({ links }: Props) => {
             ))}
           </CommandGroup>
           <CommandSeparator />
+          <CommandGroup heading={process.env.NEXT_PUBLIC_BUILD_NUMBER} />
         </CommandList>
       </CommandDialog>
     </>
