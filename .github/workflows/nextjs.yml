@@ -73,9 +73,9 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Generating Build Number
+      - name: Generating build number
         id: build-number
-        run: echo "BUILD_NUMBER=$GITHUB_SHA" >> $GITHUB_ENV
+        run: echo "BUILD_NUMBER=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
       - name: Create .env file
         uses: SpicyPizza/create-envfile@v2.0.3
         with:
