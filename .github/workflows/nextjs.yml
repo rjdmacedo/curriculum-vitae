@@ -77,11 +77,11 @@ jobs:
         id: build-number
         run: echo "BUILD_NUMBER=$GITHUB_SHA" >> $GITHUB_ENV
       - name: Create .env file
-        uses: ozaytsev86/create-env-file-action@v1
+        uses: SpicyPizza/create-envfile@v2.0.3
         with:
-          ENV_NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.POSTHOG_KEY }}
-          ENV_NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.POSTHOG_HOST }}
-          ENV_NEXT_PUBLIC_BUILD_NUMBER: ${{ steps.build-number.outputs.BUILD_NUMBER }}
+          envkey_NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.POSTHOG_KEY }}
+          envkey_NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.POSTHOG_HOST }}
+          envkey_NEXT_PUBLIC_BUILD_NUMBER: ${{ steps.build-number.outputs.BUILD_NUMBER }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
