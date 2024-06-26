@@ -5,6 +5,7 @@ import {Analytics} from "@vercel/analytics/react";
 import AppProviders from "@/app/app-providers";
 
 import "./globals.css";
+import {PosthogPageviewTracker} from "@/components/posthog-pageview-tracker";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <AppProviders>
         <body>{children}</body>
+        <PosthogPageviewTracker />
         <Analytics />
       </AppProviders>
     </html>

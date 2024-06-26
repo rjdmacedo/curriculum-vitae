@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import PostHog from "posthog-js";
 
 import {
   CommandDialog,
@@ -33,6 +34,11 @@ export const CommandMenu = ({ links }: Props) => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
+  function handleCommandButtonClick() {
+    setOpen((open) => !open);
+    PostHog.capture("command_menu_opened");
+  }
+
   return (
     <>
       <p className="fixed bottom-0 left-0 right-0 hidden border-t border-t-muted bg-white p-1 text-center text-sm text-muted-foreground print:hidden xl:block">
@@ -43,9 +49,9 @@ export const CommandMenu = ({ links }: Props) => {
         to open the command menu
       </p>
       <Button
-        onClick={() => setOpen((open) => !open)}
-        variant="outline"
         size="icon"
+        variant="outline"
+        onClick={handleCommandButtonClick}
         className="fixed bottom-4 right-4 flex rounded-full shadow-2xl print:hidden xl:hidden"
       >
         <CommandIcon className="my-6 size-6" />
@@ -58,6 +64,7 @@ export const CommandMenu = ({ links }: Props) => {
             <CommandItem
               onSelect={() => {
                 setOpen(false);
+                PostHog.capture("command_menu_print_clicked");
                 window.print();
               }}
             >
@@ -70,6 +77,7 @@ export const CommandMenu = ({ links }: Props) => {
                 key={url}
                 onSelect={() => {
                   setOpen(false);
+                  PostHog.capture("command_menu_link_clicked", { url });
                   window.open(url, "_blank");
                 }}
               >
