@@ -75,7 +75,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Generating Build Number
         id: build-number
-        run: echo "BUILD_NUMBER=$(date +%s)" >> $GITHUB_ENV
+        run: echo "BUILD_NUMBER=$GITHUB_SHA" >> $GITHUB_ENV
       - name: Create .env file
         uses: ozaytsev86/create-env-file-action@v1
         with:
