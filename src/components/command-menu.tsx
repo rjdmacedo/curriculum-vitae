@@ -23,6 +23,10 @@ export const CommandMenu = ({ links }: Props) => {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
+    PostHog.capture("command menu state changed", { open });
+  }, [open]);
+
+  React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
@@ -36,7 +40,6 @@ export const CommandMenu = ({ links }: Props) => {
 
   function handleCommandButtonClick() {
     setOpen((open) => !open);
-    PostHog.capture("command_menu_opened");
   }
 
   return (
