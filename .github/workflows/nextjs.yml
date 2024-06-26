@@ -78,7 +78,7 @@ jobs:
         with:
           ENV_NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.POSTHOG_KEY }}
           ENV_NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.POSTHOG_HOST }}
-          ENV_NEXT_PUBLIC_BUILD_NUMBER: ${{ github.run_number }}
+          ENV_NEXT_PUBLIC_BUILD_NUMBER: ${{ github.sha }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
