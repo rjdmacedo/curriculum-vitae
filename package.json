@@ -2,6 +2,7 @@
   "name": "curriculum-vitae",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rjdmacedo.github.io/curriculum-vitae/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,7 +19,8 @@
     "clsx": "^2.0.0",
     "cmdk": "^0.2.0",
     "lucide-react": "^0.300.0",
-    "next": "14.0.4",
+    "next": "14.1.1",
+    "posthog-js": "^1.141.4",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.0",
