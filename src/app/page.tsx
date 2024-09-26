@@ -8,6 +8,13 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -98,6 +105,26 @@ export default function Page() {
             {RESUME_DATA.summary}
           </p>
         </Section>
+        <Accordion type="single" collapsible defaultValue="articles">
+          <AccordionItem value="articles">
+            <AccordionTrigger>
+              <h2 className="text-xl font-bold">Articles by Rafael</h2>
+            </AccordionTrigger>
+            <AccordionContent className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              <ProjectCard
+                tags={["Vue", "React", "Comparison", "Tech Stack"]}
+                link="https://www.scalablepath.com/front-end/vue-vs-react"
+                title="Vue vs React"
+                description="We compare Vue.js and React, including the differences between the two frameworks, their strengths and weaknesses, and when to use each."
+              />
+              <ProjectCard
+                tags={["No/Low Code", "Tools", "WYSIWYG", "Development"]}
+                title="How to Master Low Code/No Code"
+                description="We explore low-code and no-code development, including the benefits and use cases for developers. Plus, an overview of low-code platforms and best practices."
+              />
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
