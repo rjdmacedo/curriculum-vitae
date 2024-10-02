@@ -119,6 +119,7 @@ export default function Page() {
               />
               <ProjectCard
                 tags={["No/Low Code", "Tools", "WYSIWYG", "Development"]}
+                link="https://www.scalablepath.com/front-end/low-code-no-code"
                 title="How to Master Low Code/No Code"
                 description="We explore low-code and no-code development, including the benefits and use cases for developers. Plus, an overview of low-code platforms and best practices."
               />
