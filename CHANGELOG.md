@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.1...v1.0.2) (2025-12-11)
+
+
+### Bug Fixes
+
+* allow manual deploy and robustify checkout check ([2a2badf](https://github.com/rjdmacedo/curriculum-vitae/commit/2a2badf10e010ed015f5d65ebdd6a03b28ef949a))
+
 ## [1.0.1](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.0...v1.0.1) (2025-12-11)
 
 
