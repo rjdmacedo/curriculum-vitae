@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.5...v1.0.6) (2025-12-11)
+
+
+### Bug Fixes
+
+* use semantic-release-action to capture outputs ([9bf7fe1](https://github.com/rjdmacedo/curriculum-vitae/commit/9bf7fe118b60838aedbadcc95f0615210191f869))
+
 ## [1.0.5](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.4...v1.0.5) (2025-12-11)
 
 
