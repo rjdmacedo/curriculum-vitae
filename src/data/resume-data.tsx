@@ -11,9 +11,31 @@ export const RESUME_DATA = {
   about:
     "Frontend Engineer focused on building products with extra attention to detail",
   summary:
-    "As a Frontend Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world. I am a fast learner and I am always looking for new challenges. I am a big fan of open-source and I try to contribute to it as much as I can.",
+    "Frontend Engineer with over 8 years of experience taking multiple products from 0 to 1. Specialized in TypeScript, React, Node.js, and GraphQL. Proven track record of leading teams effectively and fostering environments where people do their best work. Extensive experience working remotely with global companies. Passionate about open-source and continuous learning.",
+  ui: {
+    sectionHeaders: {
+      about: "About",
+      articles: "Articles",
+      work: "Work Experience",
+      education: "Education",
+      skills: "Skills",
+      projects: "Projects",
+    },
+    commandMenu: {
+      actions: "Actions",
+      print: "Print",
+      links: "Links",
+      placeholder: "Type a command or search...",
+      noResults: "No results found.",
+      open: {
+        beforeCmd: "Press",
+        afterCmd: "to open the command menu",
+        cmd: "⌘J",
+      },
+    },
+  },
   avatarUrl: "https://avatars.githubusercontent.com/u/16735002?v=4",
-  personalWebsiteUrl: "https://github.com/rjdmacedo",
+  personalWebsiteUrl: "https://rjdmacedo.github.io/curriculum-vitae",
   contact: {
     email: "rafaelmacedo4@gmail.com",
     tel: "+351912685890",
@@ -51,6 +73,14 @@ export const RESUME_DATA = {
       title: "Senior Software Engineer",
       start: "2021",
       end: "Present",
+      techStack: [
+        "Vue.js",
+        "Nuxt.js",
+        "TypeScript",
+        "GraphQL",
+        "Tailwind CSS",
+        "Node.js",
+      ],
       description:
         'Developed a store integration using Vue Storefront Core for seamless communication with Elastic Path. Implemented an abstraction layer through composables to simplify interaction complexity and boost developer productivity. Collaborated closely with the Elastic Path Engineering team to overcome technical challenges and ensure a successful integration. Served as a middleware between Vue Storefront and Elastic Path, facilitating data exchange and synchronization. Led the integration project, taking responsibility for delivery and managing stakeholder expectations. Enforced Agile methodologies with well-defined tasks, a groomed backlog, and clear "Definition of Done" and "Definition of Ready" parameters.',
     },
@@ -61,6 +91,7 @@ export const RESUME_DATA = {
       title: "Senior Software Engineer",
       start: "2018",
       end: "2021",
+      techStack: ["React", "Redux", "TypeScript", "Node.js", "Jest"],
       description:
         "Led UI component design and development using React, creating responsive and interactive interfaces. Translated designs into high-quality code, debugged, and optimized performance with tools like Sentry JS and New Relic. Collected and analyzed front-end user data for insightful decision-making. Developed features using Vue.js and React, emphasizing reusability and maintaining consistent design patterns. Contributed to Farfetch's A/B Testing tool UI, expanding the React components library. Worked in a Kanban environment, collaborated on UI design, and actively participated in peer reviews and continuous deployment. Proficient in advanced Git techniques, ensuring comprehensive test coverage and following the DRY principle for code efficiency. Collaborated with the development team to align UI ideas with business goals, reviewed requirements, and ensured compatibility with existing applications.",
     },
@@ -71,8 +102,9 @@ export const RESUME_DATA = {
       title: "Senior Software Engineer",
       start: "2018",
       end: "2019",
+      techStack: ["JavaScript", "HTML/CSS", "Unit Testing", "Jest", "Cypress"],
       description:
-        "Have a robust background in software development and testing, having implemented Jest for unit testing and Cypress for end-to-end testing to ensure codebase reliability. Additionally, I developed a Biometric Software Development Kit in JavaScript, empowering developers to integrate biometric capabilities. In an Agile environment using Kanban, I collaborated with cross-functional teams and demonstrated leadership by managing the integration project between Vue Storefront and Elastic Path. Acting as middleware, I facilitated seamless communication and data exchange, while also enforcing Agile methodologies for efficient project delivery. Overall, my experience spans technical innovation, collaboration with diverse teams, and successful project leadership.",
+        "Developed a Biometric Software Development Kit in JavaScript, empowering developers to integrate biometric capabilities. Implemented Jest for unit testing and Cypress for end-to-end testing, significantly improving codebase reliability. Managed the integration project between Vue Storefront and Elastic Path, facilitating seamless communication and data exchange. Enforced Agile methodologies (Kanban) to ensure efficient project delivery and effective cross-functional collaboration.",
     },
     {
       company: "Alter Solutions",
@@ -81,40 +113,62 @@ export const RESUME_DATA = {
       title: "Software Engineer",
       start: "2016",
       end: "2018",
+      techStack: ["Laravel", "AngularJS", "Vue.js", "MySQL", "Redis"],
       description:
-        "I have a strong background in web development, having built and enhanced two applications for a French client. Leveraging Laravel on the backend and AngularJS on the frontend, I optimized performance with Redis queues for CPU-intensive jobs. I conducted ongoing maintenance, implemented component development practices, and collaborated closely with end-users for testing and problem analysis. In frontend development, I used Laravel's Eloquent ORM, Vue.js, and AngularJS, incorporating real-time updates with sockets. Database solutions involved MySQL and CouchDB, showcasing adaptability to diverse data storage needs. I practiced Test Driven Development (TDD) with PHPUnit and Mocha.js, ensuring code quality. Efficient code versioning and collaboration were managed using Git, and I streamlined the development workflow with Webpack, Yarn, and Node.js. Overall, my experience reflects a comprehensive approach to web development, emphasizing technical proficiency, collaboration, and a commitment to high-quality solutions.",
+        "Built and enhanced two full-stack web applications for a major French client using Laravel and AngularJS. Optimized system performance by implementing Redis queues for CPU-intensive tasks. Integrated real-time updates using WebSockets and managed diverse data storage needs with MySQL and CouchDB. Practiced Test Driven Development (TDD) using PHPUnit and Mocha.js to ensure high code quality. Streamlined development workflows by introducing Webpack and Yarn, and maintained efficient version control with Git.",
     },
   ],
   skills: [
-    "SEO",
-    "Jest",
-    "Remix",
-    "React",
-    "Prisma",
-    "Vue.js",
-    "Node.js",
-    "Next.js",
-    "Nuxt.js",
-    "GraphQL",
-    "Vuetify",
-    "Laravel",
-    "Shopify",
-    "HTML/CSS",
-    "REST API",
-    "JavaScript",
-    "TypeScript",
-    "Ant Design",
-    "Material UI",
-    "Tailwind CSS",
-    "React Router",
-    "React Context",
-    "Apollo GraphQL",
-    "Design Patterns",
-    "React Hook Form",
-    "Apollo Federation",
-    "Styled Components",
-    "Gateway Integration",
-    "Frontend Development",
+    {
+      category: "Languages",
+      items: ["TypeScript", "JavaScript", "HTML/CSS"],
+    },
+    {
+      category: "Frontend Frameworks",
+      items: ["React", "Next.js", "Remix", "Vue.js", "Nuxt.js"],
+    },
+    {
+      category: "Backend & Data",
+      items: ["Node.js", "GraphQL", "Prisma", "Laravel", "Apollo GraphQL"],
+    },
+    {
+      category: "UI & Styling",
+      items: [
+        "Tailwind CSS",
+        "Material UI",
+        "Ant Design",
+        "Vuetify",
+        "Styled Components",
+      ],
+    },
+    {
+      category: "Tools & Concepts",
+      items: [
+        "Jest",
+        "Cypress",
+        "Git",
+        "Docker",
+        "SEO",
+        "Design Patterns",
+        "REST API",
+      ],
+    },
+  ],
+  articles: [
+    {
+      title: "Vue vs React",
+      link: "https://www.scalablepath.com/front-end/vue-vs-react",
+      tags: ["Vue", "React", "Comparison", "Tech Stack"],
+      description:
+        "We compare Vue.js and React, including the differences between the two frameworks, their strengths and weaknesses, and when to use each.",
+    },
+    {
+      title: "How to Master Low Code/No Code",
+      link: "https://www.scalablepath.com/front-end/low-code-no-code",
+      tags: ["No/Low Code", "Tools", "WYSIWYG", "Development"],
+      description:
+        "We explore low-code and no-code development, including the benefits and use cases for developers. Plus, an overview of low-code platforms and best practices.",
+    },
   ],
   projects: [
     {
@@ -123,7 +177,6 @@ export const RESUME_DATA = {
         "Node",
         "GraphQL",
         "JavaScript",
-        "Senior Engineer",
         "Apollo Federation",
       ],
       description:
@@ -131,7 +184,7 @@ export const RESUME_DATA = {
     },
     {
       title: "GDPR Compliance",
-      techStack: ["Frontend Engineer", "JavaScript", "React", "C#"],
+      techStack: ["JavaScript", "React", "C#"],
       description:
         "Built a GDPR compliance tool that helps companies to comply with GDPR regulations",
     },
@@ -144,7 +197,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Biometrid SDK",
-      techStack: ["Lead Engineer", "JavaScript", "TypeScript", "Nest.js"],
+      techStack: ["JavaScript", "TypeScript", "Nest.js"],
       link: {
         label: "Biometrid",
         href: "https://biometrid.com",
