@@ -4,7 +4,7 @@ import React from "react";
 import { Inter } from "next/font/google";
 
 import AppProviders from "@/app/app-providers";
-import { PosthogPageviewTracker } from "@/components/posthog-pageview-tracker";
+import { PosthogPageViewTracker } from "@/components/posthog-page-view-tracker";
 
 import "./globals.css";
 
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body>
         <AppProviders>
           {children}
-          <PosthogPageviewTracker />
+          <PosthogPageViewTracker />
         </AppProviders>
       </body>
     </html>

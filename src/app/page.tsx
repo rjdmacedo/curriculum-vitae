@@ -100,34 +100,29 @@ export default function Page() {
           </Avatar>
         </div>
         <Section>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.about}</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
             {RESUME_DATA.summary}
           </p>
         </Section>
-        <Accordion type="single" collapsible defaultValue="articles">
-          <AccordionItem value="articles">
-            <AccordionTrigger>
-              <h2 className="text-xl font-bold">Articles by Rafael</h2>
-            </AccordionTrigger>
-            <AccordionContent className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-              <ProjectCard
-                tags={["Vue", "React", "Comparison", "Tech Stack"]}
-                link="https://www.scalablepath.com/front-end/vue-vs-react"
-                title="Vue vs React"
-                description="We compare Vue.js and React, including the differences between the two frameworks, their strengths and weaknesses, and when to use each."
-              />
-              <ProjectCard
-                tags={["No/Low Code", "Tools", "WYSIWYG", "Development"]}
-                link="https://www.scalablepath.com/front-end/low-code-no-code"
-                title="How to Master Low Code/No Code"
-                description="We explore low-code and no-code development, including the benefits and use cases for developers. Plus, an overview of low-code platforms and best practices."
-              />
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+        {RESUME_DATA.articles.length > 0 && (
+          <Section className="scroll-mb-16">
+            <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.articles}</h2>
+            <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-2">
+              {RESUME_DATA.articles.map((article) => (
+                <ProjectCard
+                  key={article.title}
+                  title={article.title}
+                  description={article.description}
+                  tags={article.tags}
+                  link={"link" in article ? article.link : undefined}
+                />
+              ))}
+            </div>
+          </Section>
+        )}
         <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+          <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.work}</h2>
           {RESUME_DATA.work.map((work) => (
             <Card key={work.company}>
               <CardHeader>
@@ -158,12 +153,25 @@ export default function Page() {
               </CardHeader>
               <CardContent className="mt-2 text-xs">
                 {work.description}
+                {work.techStack && (
+                  <div className="mt-2 flex flex-wrap gap-1">
+                    {work.techStack.map((tag) => (
+                      <Badge
+                        variant="secondary"
+                        className="align-middle text-xs"
+                        key={tag}
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Education</h2>
+          <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.education}</h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
@@ -183,15 +191,24 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
-            })}
+          <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.skills}</h2>
+          <div className="flex flex-col gap-y-3">
+            {RESUME_DATA.skills.map((skillGroup) => (
+              <div key={skillGroup.category} className="flex flex-col gap-y-2">
+                <h3 className="text-sm font-semibold text-muted-foreground">
+                  {skillGroup.category}
+                </h3>
+                <div className="flex flex-wrap gap-1">
+                  {skillGroup.items.map((skill) => (
+                    <Badge key={skill}>{skill}</Badge>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </Section>
         <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
+          <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.projects}</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => (
               <ProjectCard

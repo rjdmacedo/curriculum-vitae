@@ -2,7 +2,7 @@ import { usePathname } from "next/navigation";
 import { usePostHog } from "posthog-js/react";
 import { useEffect } from "react";
 
-export const PosthogPageviewTracker = () => {
+export const PosthogPageViewTracker = () => {
   const posthog = usePostHog();
   const pathname = usePathname();
 
