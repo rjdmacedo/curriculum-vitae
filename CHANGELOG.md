@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.4...v1.0.5) (2025-12-11)
+
+
+### Bug Fixes
+
+* replace create-env-file-action with manual shell commands ([349b774](https://github.com/rjdmacedo/curriculum-vitae/commit/349b7742e51b8ce72f2ca3e79f274740d54653b1))
+
 ## [1.0.4](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.3...v1.0.4) (2025-12-11)
 
 
