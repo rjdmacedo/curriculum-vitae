@@ -29,7 +29,7 @@ concurrency:
 
 jobs:
   # Build job
-  build:
+  deploy-preparation:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -96,7 +96,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: deploy-preparation
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
