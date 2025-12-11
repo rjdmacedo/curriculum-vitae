@@ -73,7 +73,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: release
-    if: needs.release.outputs.new_release_published == 'true'
+    if: needs.release.outputs.new_release_published == 'true' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -82,7 +82,7 @@ jobs:
       - name: Checkout Release Tag
         uses: actions/checkout@v4
         with:
-          ref: v${{ needs.release.outputs.new_release_version }}
+          ref: ${{ needs.release.outputs.new_release_version && format('v{0}', needs.release.outputs.new_release_version) || '' }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
