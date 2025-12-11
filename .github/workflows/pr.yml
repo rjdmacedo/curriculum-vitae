@@ -1,15 +1,12 @@
-name: CI
+name: PR Validation
 
 on:
-  push:
-    branches: ["master"]
   pull_request:
     branches: ["master"]
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,5 +41,5 @@ jobs:
       - name: Lint
         run: ${{ steps.detect-package-manager.outputs.manager }} run lint
 
-      - name: Build
+      - name: Build Check
         run: ${{ steps.detect-package-manager.outputs.runner }} run build
