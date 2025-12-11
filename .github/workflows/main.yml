@@ -94,10 +94,9 @@ jobs:
         run: yarn install --frozen-lockfile --ignore-scripts
 
       - name: Create .env file
-        uses: ozaytsev86/create-env-file-action@v1
-        with:
-          ENV_NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.POSTHOG_KEY }}
-          ENV_NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.POSTHOG_HOST }}
+        run: |
+          echo "NEXT_PUBLIC_POSTHOG_KEY=${{ secrets.POSTHOG_KEY }}" >> .env
+          echo "NEXT_PUBLIC_POSTHOG_HOST=${{ secrets.POSTHOG_HOST }}" >> .env
 
       - name: Configure Pages via Next.js
         uses: actions/configure-pages@v4
