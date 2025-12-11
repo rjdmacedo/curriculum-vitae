@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.2...v1.0.3) (2025-12-11)
+
+
+### Bug Fixes
+
+* explicit expression interpolation for deploy condition ([771a097](https://github.com/rjdmacedo/curriculum-vitae/commit/771a097cec0a01c99bc4b6e630a8ad9f83425eb1))
+
 ## [1.0.2](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.1...v1.0.2) (2025-12-11)
 
 
