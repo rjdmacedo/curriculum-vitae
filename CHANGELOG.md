@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.3...v1.0.4) (2025-12-11)
+
+
+### Bug Fixes
+
+* remove deploy condition to always deploy on release success ([ec6a072](https://github.com/rjdmacedo/curriculum-vitae/commit/ec6a072140bc11c9d90a3824cd933a1ca165bad5))
+
 ## [1.0.3](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.2...v1.0.3) (2025-12-11)
 
 
