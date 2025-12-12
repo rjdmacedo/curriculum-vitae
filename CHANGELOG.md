@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.0...v1.1.1) (2025-12-12)
+
+
+### Bug Fixes
+
+* **analytics:** use env var for GA ID and update example env ([bc937ae](https://github.com/rjdmacedo/curriculum-vitae/commit/bc937ae19f0b6a8307e808aa93b5035e0fdf5b4e))
+* hardcode google analytics id and fix layout imports ([b549e93](https://github.com/rjdmacedo/curriculum-vitae/commit/b549e93f5b79f8aad04e63c54f2d5a0d37f86eea))
+* remove remaining posthog traces from error handling and command menu ([51f1253](https://github.com/rjdmacedo/curriculum-vitae/commit/51f12538d2160152b30ee7ec900a56dfcd7b0d74))
+
 # [1.1.0](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.6...v1.1.0) (2025-12-12)
 
 
