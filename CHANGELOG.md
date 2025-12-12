@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.2...v1.1.3) (2025-12-12)
+
+
+### Bug Fixes
+
+* replace imperative setTimeout with declarative state for printing ([6d30b54](https://github.com/rjdmacedo/curriculum-vitae/commit/6d30b5420d54fc4a83494ea67e457ad8df4807b3))
+
 ## [1.1.2](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.1...v1.1.2) (2025-12-12)
 
 
