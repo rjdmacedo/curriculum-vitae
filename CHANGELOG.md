@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.1...v1.1.2) (2025-12-12)
+
+
+### Bug Fixes
+
+* use setTimeout for printing to ensure dialog closes on mobile ([f63cc89](https://github.com/rjdmacedo/curriculum-vitae/commit/f63cc896d57ed2eb4d504a49e30a3f01f52dd7a5))
+
 ## [1.1.1](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.0...v1.1.1) (2025-12-12)
 
 
