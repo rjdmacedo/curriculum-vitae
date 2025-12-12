@@ -15,7 +15,7 @@ export default function AppProviders({
       {children}
       <Analytics />
       <GoogleAnalytics
-        gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string}
+        gaId={(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string) || ""}
       />
     </>
   );
