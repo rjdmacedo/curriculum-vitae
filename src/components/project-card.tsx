@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { Link as LinkIcon } from "lucide-react";
 
 interface Props {
   title: string;
@@ -24,10 +25,15 @@ export function ProjectCard({ title, description, tags, link }: Props) {
               <a
                 href={link}
                 target="_blank"
-                className="inline-flex items-center gap-1 underline"
+                className="inline-flex items-center gap-1 hover:underline"
               >
-                {title}{" "}
-                <span className="size-2 rounded-full bg-green-500"></span>
+                <Badge
+                  className="bg-blue-100 px-1 text-[10px] text-blue-600 hover:bg-blue-200"
+                  variant="secondary"
+                >
+                  <LinkIcon className="size-3" />
+                </Badge>
+                {title}
               </a>
             ) : (
               title
@@ -36,7 +42,7 @@ export function ProjectCard({ title, description, tags, link }: Props) {
           <div className="hidden font-mono text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <CardDescription className="font-mono text-xs">
+          <CardDescription className="font-mono text-xs text-justify">
             {description}
           </CardDescription>
         </div>
