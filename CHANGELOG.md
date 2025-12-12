@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.3...v1.1.4) (2025-12-12)
+
+
+### Bug Fixes
+
+* restore GA ID injection in workflow which was lost in rebase ([5e85d5d](https://github.com/rjdmacedo/curriculum-vitae/commit/5e85d5de255ac8f12f713ef62fbbd5facabf18a8))
+
 ## [1.1.3](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.2...v1.1.3) (2025-12-12)
 
 
