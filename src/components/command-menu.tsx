@@ -66,9 +66,9 @@ export const CommandMenu = ({ links }: Props) => {
               onSelect={() => {
                 setOpen(false);
                 // Allow the dialog to close before printing
-                requestAnimationFrame(() => {
+                setTimeout(() => {
                   window.print();
-                });
+                }, 300);
               }}
             >
               <span>{RESUME_DATA.ui.commandMenu.print}</span>
