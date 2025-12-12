@@ -11,7 +11,7 @@ export const RESUME_DATA = {
   about:
     "Frontend Engineer focused on building products with extra attention to detail",
   summary:
-    "Frontend Engineer with over 8 years of experience taking multiple products from 0 to 1. Specialized in TypeScript, React, Node.js, and GraphQL. Proven track record of leading teams effectively and fostering environments where people do their best work. Extensive experience working remotely with global companies. Passionate about open-source and continuous learning.",
+    "Senior Frontend Engineer with 8+ years of expertise in architecting and scaling high-impact web applications from conception to launch. Specialized in the modern JavaScript ecosystem (TypeScript, React, Node.js, GraphQL). Proven leader in guiding cross-functional teams and cultivating a culture of engineering excellence. Experienced in remote collaboration with global distributed teams. Dedicated contributor to open-source communities and committed to continuous technical evolution.",
   ui: {
     sectionHeaders: {
       about: "About",
@@ -82,7 +82,7 @@ export const RESUME_DATA = {
         "Node.js",
       ],
       description:
-        'Developed a store integration using Vue Storefront Core for seamless communication with Elastic Path. Implemented an abstraction layer through composables to simplify interaction complexity and boost developer productivity. Collaborated closely with the Elastic Path Engineering team to overcome technical challenges and ensure a successful integration. Served as a middleware between Vue Storefront and Elastic Path, facilitating data exchange and synchronization. Led the integration project, taking responsibility for delivery and managing stakeholder expectations. Enforced Agile methodologies with well-defined tasks, a groomed backlog, and clear "Definition of Done" and "Definition of Ready" parameters.',
+        "Architected and delivered the comprehensive integration between Vue Storefront and Elastic Path, establishing a seamless e-commerce ecosystem. Engineered a robust abstraction layer using composables, significantly reducing code complexity and accelerating developer velocity. Spearheaded the technical collaboration with the Elastic Path engineering team, resolving critical bottlenecks to ensure a smooth launch. Served as the primary technical liaison, facilitating efficient data synchronization strategies. Led the end-to-end project lifecycle, managing stakeholder expectations and enforcing rigorous Agile practices to guarantee high-quality delivery.",
     },
     {
       company: "Farfetch",
@@ -93,7 +93,7 @@ export const RESUME_DATA = {
       end: "2021",
       techStack: ["React", "Redux", "TypeScript", "Node.js", "Jest"],
       description:
-        "Led UI component design and development using React, creating responsive and interactive interfaces. Translated designs into high-quality code, debugged, and optimized performance with tools like Sentry JS and New Relic. Collected and analyzed front-end user data for insightful decision-making. Developed features using Vue.js and React, emphasizing reusability and maintaining consistent design patterns. Contributed to Farfetch's A/B Testing tool UI, expanding the React components library. Worked in a Kanban environment, collaborated on UI design, and actively participated in peer reviews and continuous deployment. Proficient in advanced Git techniques, ensuring comprehensive test coverage and following the DRY principle for code efficiency. Collaborated with the development team to align UI ideas with business goals, reviewed requirements, and ensured compatibility with existing applications.",
+        "Spearheaded the design and implementation of scalable UI components in React, driving consistency across the platform. Optimized application performance and stability by integrating Sentry and New Relic, resulting in reduced downtime and faster load times. Leveraged data-driven insights to refine frontend architecture and enhance user engagement. Expanded the internal UI library for the A/B Testing tool, promoting code reusability and design uniformity. Championed best practices in code quality, including comprehensive testing and adherence to DRY principles, within a fast-paced Kanban environment.",
     },
     {
       company: "Polygon",
@@ -104,7 +104,7 @@ export const RESUME_DATA = {
       end: "2019",
       techStack: ["JavaScript", "HTML/CSS", "Unit Testing", "Jest", "Cypress"],
       description:
-        "Developed a Biometric Software Development Kit in JavaScript, empowering developers to integrate biometric capabilities. Implemented Jest for unit testing and Cypress for end-to-end testing, significantly improving codebase reliability. Managed the integration project between Vue Storefront and Elastic Path, facilitating seamless communication and data exchange. Enforced Agile methodologies (Kanban) to ensure efficient project delivery and effective cross-functional collaboration.",
+        "Engineered a JavaScript-based Biometric SDK, enabling third-party developers to seamlessly verify user identities. Established a rigorous testing framework using Jest and Cypress, elevating code reliability and maintainability. Implemented Agile workflows to streamline feature delivery and enhance team collaboration.",
     },
     {
       company: "Alter Solutions",
@@ -115,7 +115,7 @@ export const RESUME_DATA = {
       end: "2018",
       techStack: ["Laravel", "AngularJS", "Vue.js", "MySQL", "Redis"],
       description:
-        "Built and enhanced two full-stack web applications for a major French client using Laravel and AngularJS. Optimized system performance by implementing Redis queues for CPU-intensive tasks. Integrated real-time updates using WebSockets and managed diverse data storage needs with MySQL and CouchDB. Practiced Test Driven Development (TDD) using PHPUnit and Mocha.js to ensure high code quality. Streamlined development workflows by introducing Webpack and Yarn, and maintained efficient version control with Git.",
+        "Designed and deployed two mission-critical full-stack applications for a major international client using Laravel and AngularJS. Architected a high-performance backend processing system utilizing Redis queues to handle CPU-intensive workloads. Implemented real-time data synchronization with WebSockets and engineered robust data storage solutions using MySQL and CouchDB. Championed Test Driven Development (TDD) practices to maintain superior code quality and reliability. Modernized the development infrastructure by integrating Webpack and Yarn, significantly improving build times and developer efficiency.",
     },
   ],
   skills: [
@@ -158,16 +158,16 @@ export const RESUME_DATA = {
     {
       title: "Vue vs React",
       link: "https://www.scalablepath.com/front-end/vue-vs-react",
-      tags: ["Vue", "React", "Comparison", "Tech Stack"],
+      tags: ["Vue.js", "React", "Frontend Architecture", "Comparison"],
       description:
-        "We compare Vue.js and React, including the differences between the two frameworks, their strengths and weaknesses, and when to use each.",
+        "A comprehensive comparison of React and Vue, covering key criteria for choosing the right framework, similarities, differences, and dealing with frequent updates to help developers make an educated decision.",
     },
     {
       title: "How to Master Low Code/No Code",
       link: "https://www.scalablepath.com/front-end/low-code-no-code",
-      tags: ["No/Low Code", "Tools", "WYSIWYG", "Development"],
+      tags: ["Low-Code", "No-Code", "Rapid Prototyping", "Visual Development"],
       description:
-        "We explore low-code and no-code development, including the benefits and use cases for developers. Plus, an overview of low-code platforms and best practices.",
+        "Explores the rise of low-code and no-code platforms, their benefits, drawbacks, and use cases, providing an overview of how these tools bridge the gap between demand for software and developer supply.",
     },
   ],
   projects: [
@@ -180,19 +180,19 @@ export const RESUME_DATA = {
         "Apollo Federation",
       ],
       description:
-        "Headless SDK is a tool that allows you to build a headless eCommerce solutions using any backend you want.",
+        "A versatile SDK enabling the creation of headless eCommerce solutions with any backend architecture.",
     },
     {
       title: "GDPR Compliance",
       techStack: ["JavaScript", "React", "C#"],
       description:
-        "Built a GDPR compliance tool that helps companies to comply with GDPR regulations",
+        "Developed a comprehensive tool facilitating automated GDPR compliance for enterprise organizations.",
     },
     {
       title: "SIIOP",
       techStack: ["Vue", "Laravel", "MySQL", "Docker", "Apache", "Gulp"],
       description:
-        "SIIOP is a system for managing and monitoring the work of the police. It is used by the Portuguese Police",
+        "A robust management and monitoring system deployed for the Portuguese Police force.",
       logo: SIIOPLogo,
     },
     {
@@ -203,7 +203,7 @@ export const RESUME_DATA = {
         href: "https://biometrid.com",
       },
       description:
-        "Biometrid is a platform that allows you to verify your identity using your face, voice, and ID card. This project was built from scratch and is currently in production.",
+        "A proprietary identity verification platform utilizing facial, voice, and ID recognition, managed from inception to production deployment.",
       logo: PolygonLogo,
     },
   ],
