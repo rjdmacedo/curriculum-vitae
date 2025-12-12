@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import PostHog from "posthog-js";
 
 import {
   CommandDialog,
@@ -24,10 +23,6 @@ interface Props {
 export const CommandMenu = ({ links }: Props) => {
   const [open, setOpen] = React.useState(false);
   const { version } = packageJson;
-
-  React.useEffect(() => {
-    PostHog.capture("command menu state changed", { open });
-  }, [open]);
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -74,7 +69,6 @@ export const CommandMenu = ({ links }: Props) => {
                 requestAnimationFrame(() => {
                   window.print();
                 });
-                PostHog.capture("command menu print clicked");
               }}
             >
               <span>{RESUME_DATA.ui.commandMenu.print}</span>
@@ -87,7 +81,7 @@ export const CommandMenu = ({ links }: Props) => {
                 key={url}
                 onSelect={() => {
                   setOpen(false);
-                  PostHog.capture("command menu link clicked", { url });
+                  // Track command menu link clicked
                   window.open(url, "_blank");
                 }}
               >
