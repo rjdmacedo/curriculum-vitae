@@ -22,6 +22,7 @@ interface Props {
 
 export const CommandMenu = ({ links }: Props) => {
   const [open, setOpen] = React.useState(false);
+  const [shouldPrint, setShouldPrint] = React.useState(false);
   const { version } = packageJson;
 
   React.useEffect(() => {
@@ -35,6 +36,13 @@ export const CommandMenu = ({ links }: Props) => {
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, []);
+
+  React.useEffect(() => {
+    if (!open && shouldPrint) {
+      setShouldPrint(false);
+      window.print();
+    }
+  }, [open, shouldPrint]);
 
   function handleCommandButtonClick() {
     setOpen((open) => !open);
@@ -64,11 +72,8 @@ export const CommandMenu = ({ links }: Props) => {
           <CommandGroup heading={RESUME_DATA.ui.commandMenu.actions}>
             <CommandItem
               onSelect={() => {
+                setShouldPrint(true);
                 setOpen(false);
-                // Allow the dialog to close before printing
-                setTimeout(() => {
-                  window.print();
-                }, 300);
               }}
             >
               <span>{RESUME_DATA.ui.commandMenu.print}</span>
