@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.6...v1.1.0) (2025-12-12)
+
+
+### Features
+
+* improve cv content, layout and project cards ([d2deb62](https://github.com/rjdmacedo/curriculum-vitae/commit/d2deb6266a1e7226b038f9f5df716aaaf46afd85))
+
 ## [1.0.6](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.0.5...v1.0.6) (2025-12-11)
 
 
