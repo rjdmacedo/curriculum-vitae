@@ -1,6 +1,6 @@
 "use client";
 
-import PostHog from "posthog-js";
+
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Inter } from "next/font/google"; // Match layout font
@@ -19,7 +19,8 @@ export default function GlobalError({
     reset: () => void;
 }) {
     useEffect(() => {
-        PostHog.captureException(error);
+        // Log the error to an error reporting service
+        console.error(error);
     }, [error]);
 
     return (

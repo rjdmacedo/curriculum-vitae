@@ -1,6 +1,6 @@
 "use client";
 
-import PostHog from "posthog-js";
+
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -12,7 +12,8 @@ export default function Error({
     reset: () => void;
 }) {
     useEffect(() => {
-        PostHog.captureException(error);
+        // Log the error to an error reporting service
+        console.error(error);
     }, [error]);
 
     return (
