@@ -51,7 +51,7 @@
 
 "@babel/runtime@^7.13.10":
   version "7.28.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.28.4.tgz#a70226016fabe25c5783b2f22d3e1c9bc5ca3326"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.28.4.tgz"
   integrity sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==
 
 "@colors/colors@1.5.0":
@@ -185,7 +185,7 @@
 
 "@next/env@14.2.34":
   version "14.2.34"
-  resolved "https://registry.yarnpkg.com/@next/env/-/env-14.2.34.tgz#2c61caf8901598f7ad8ee9686149e06a2355955a"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.34.tgz"
   integrity sha512-iuGW/UM+EZbn2dm+aLx+avo1rVap+ASoFr7oLpTBVW2G2DqhD5l8Fme9IsLZ6TTsp0ozVSFswidiHK1NGNO+pg==
 
 "@next/eslint-plugin-next@14.0.4":
@@ -197,7 +197,7 @@
 
 "@next/swc-darwin-arm64@14.2.33":
   version "14.2.33"
-  resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.33.tgz#9e74a4223f1e5e39ca4f9f85709e0d95b869b298"
+  resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.33.tgz"
   integrity sha512-HqYnb6pxlsshoSTubdXKu15g3iivcbsMXg4bYpjL2iS/V6aQot+iyF4BUc2qA/J/n55YtvE4PHMKWBKGCF/+wA==
 
 "@next/swc-darwin-x64@14.2.33":
@@ -242,7 +242,7 @@
 
 "@next/third-parties@^16.0.10":
   version "16.0.10"
-  resolved "https://registry.yarnpkg.com/@next/third-parties/-/third-parties-16.0.10.tgz#f11537f9597722ff3d780a4722157fcd4392e359"
+  resolved "https://registry.npmjs.org/@next/third-parties/-/third-parties-16.0.10.tgz"
   integrity sha512-hu6M1uCiHyfVNv6m50Ix/5+vi4RfLkS4k5Ls7sjSN3aS9lZ6LRop9KTTKPbFfwh85p3Vlnq3fenh5HgL51UieA==
   dependencies:
     third-party-capital "1.0.20"
@@ -1168,8 +1168,13 @@
 
 "@vercel/analytics@^1.6.1":
   version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-1.6.1.tgz#b4e16daf445cf6cd365a91e43d86e9e5b3428ddc"
+  resolved "https://registry.npmjs.org/@vercel/analytics/-/analytics-1.6.1.tgz"
   integrity sha512-oH9He/bEM+6oKlv3chWuOOcp8Y6fo6/PSro8hEkgCW3pu9/OiCXiUpRUogDh3Fs3LH2sosDrx8CxeOLBEE+afg==
+
+"@vercel/speed-insights@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@vercel/speed-insights/-/speed-insights-1.3.1.tgz#df8baeba65a1aaaf11adbd09d3fe7edc6b2a493a"
+  integrity sha512-PbEr7FrMkUrGYvlcLHGkXdCkxnylCWePx7lPxxq36DNdfo9mcUjLOmqOyPDHAOgnfqgGGdmE3XI9L/4+5fr+vQ==
 
 abbrev@^4.0.0:
   version "4.0.0"
@@ -3442,7 +3447,7 @@ jiti@^1.21.0:
 
 js-yaml@^4.1.0:
   version "4.1.1"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.1.1.tgz#854c292467705b699476e1a2decc0c8a3458806b"
+  resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz"
   integrity sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==
   dependencies:
     argparse "^2.0.1"
@@ -3976,7 +3981,7 @@ nerf-dart@^1.0.0:
 
 next@14.2.34:
   version "14.2.34"
-  resolved "https://registry.yarnpkg.com/next/-/next-14.2.34.tgz#4579338eb665dfe1ecb38c0c5946a20d82fca361"
+  resolved "https://registry.npmjs.org/next/-/next-14.2.34.tgz"
   integrity sha512-s7mRraWlkEVRLjHHdu5khn0bSnmUh+U+YtigBc+t2Ge7jJHFIVBZna+W9Jcx7b04HhM7eJWrNJ2A+sQs9gJ3eg==
   dependencies:
     "@next/env" "14.2.34"
@@ -5633,7 +5638,7 @@ thenify-all@^1.0.0:
 
 third-party-capital@1.0.20:
   version "1.0.20"
-  resolved "https://registry.yarnpkg.com/third-party-capital/-/third-party-capital-1.0.20.tgz#e218a929a35bf4d2245da9addb8ab978d2f41685"
+  resolved "https://registry.npmjs.org/third-party-capital/-/third-party-capital-1.0.20.tgz"
   integrity sha512-oB7yIimd8SuGptespDAZnNkzIz+NWaJCu2RMsbs4Wmp9zSDUM8Nhi3s2OOcqYuv3mN4hitXc8DVx+LyUmbUDiA==
 
 through2@~2.0.0:
