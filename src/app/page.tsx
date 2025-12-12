@@ -28,7 +28,7 @@ export default function Page() {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground text-justify">
+            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground ">
               {RESUME_DATA.about}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
@@ -101,7 +101,7 @@ export default function Page() {
         </div>
         <Section>
           <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.about}</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground text-justify">
+          <p className="text-pretty font-mono text-sm text-muted-foreground ">
             {RESUME_DATA.summary}
           </p>
         </Section>
@@ -151,7 +151,7 @@ export default function Page() {
 
                 <h4 className="font-mono text-sm leading-none">{work.title}</h4>
               </CardHeader>
-              <CardContent className="mt-2 text-xs text-justify">
+              <CardContent className="mt-2 text-xs ">
                 {work.description}
                 {work.techStack && (
                   <div className="mt-2 flex flex-wrap gap-1">
