@@ -1,10 +1,8 @@
-"use client";
+
 
 import React from "react";
 import { Inter } from "next/font/google";
-
 import AppProviders from "@/app/app-providers";
-import { PosthogPageViewTracker } from "@/components/posthog-page-view-tracker";
 
 import "./globals.css";
 
@@ -22,10 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <AppProviders>
-          {children}
-          <PosthogPageViewTracker />
-        </AppProviders>
+        <AppProviders>{children}</AppProviders>
       </body>
     </html>
   );
