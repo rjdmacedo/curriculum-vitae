@@ -42,7 +42,10 @@ export const CommandMenu = ({ links }: Props) => {
   React.useEffect(() => {
     if (!open && shouldPrint) {
       setShouldPrint(false);
-      window.print();
+      // Wait for the dialog to close completely before printing
+      setTimeout(() => {
+        window.print();
+      }, 300); // 300ms matches typical animation duration
     }
   }, [open, shouldPrint]);
 

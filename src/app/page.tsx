@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:max-w-full print:p-8">
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-background print:max-w-none print:space-y-6">
         <div className="flex flex-col-reverse items-center gap-4 md:flex-row md:justify-between">
-          <div className="flex-1 space-y-1.5">
+          <div className="w-full space-y-1.5 md:flex-1">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground ">
               {RESUME_DATA.about}
@@ -105,7 +105,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">
               {RESUME_DATA.ui.sectionHeaders.articles}
             </h2>
-            <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-2 print:grid-cols-3 print:gap-2">
+            <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-2 print:grid-cols-2 print:gap-2">
               {RESUME_DATA.articles.map((article) => (
                 <ProjectCard
                   key={article.title}
