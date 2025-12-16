@@ -6,8 +6,11 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  // Add basePath
-  basePath: process.env.NODE_ENV === "production" ? "/curriculum-vitae" : "",
+  // Add basePath (disabled on Vercel)
+  basePath:
+    process.env.NODE_ENV === "production" && !process.env.VERCEL
+      ? "/curriculum-vitae"
+      : "",
 };
 
 module.exports = nextConfig;
