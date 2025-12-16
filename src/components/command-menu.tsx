@@ -73,6 +73,7 @@ export const CommandMenu = ({ links }: Props) => {
           <CommandEmpty>{RESUME_DATA.ui.commandMenu.noResults}</CommandEmpty>
           <CommandGroup heading={RESUME_DATA.ui.commandMenu.actions}>
             <CommandItem
+              value="print"
               onSelect={() => {
                 setShouldPrint(true);
                 sendGAEvent({ event: "print", source: "command_menu" });
@@ -87,6 +88,7 @@ export const CommandMenu = ({ links }: Props) => {
             {links.map(({ url, title }) => (
               <CommandItem
                 key={url}
+                value={title}
                 onSelect={() => {
                   setOpen(false);
                   // Track command menu link clicked
