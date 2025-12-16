@@ -8,32 +8,38 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const compat = new FlatCompat({
-    baseDirectory: __dirname,
+  baseDirectory: __dirname,
 });
 
 export default [
-    {
-        ignores: [".next/**", "out/**", "node_modules/**", "coverage/**"]
+  {
+    ignores: [".next/**", "out/**", "node_modules/**", "coverage/**"],
+  },
+  {
+    ...js.configs.recommended,
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
     },
-    {
-        ...js.configs.recommended,
-        files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
-        languageOptions: {
-            globals: {
-                ...globals.browser,
-                ...globals.node
-            }
-        }
+  },
+  ...compat.config({
+    extends: ["plugin:@typescript-eslint/recommended"],
+    parser: "@typescript-eslint/parser",
+    plugins: ["@typescript-eslint"],
+    rules: {
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-empty-object-type": "off",
+      "@typescript-eslint/no-require-imports": "error",
     },
-    ...compat.config({
-        extends: ["plugin:@typescript-eslint/recommended"],
-        parser: "@typescript-eslint/parser",
-        plugins: ["@typescript-eslint"],
-        rules: {
-            "@typescript-eslint/no-var-requires": "off",
-            "@typescript-eslint/no-unused-vars": "warn",
-            "@typescript-eslint/no-empty-object-type": "off",
-            "@typescript-eslint/no-require-imports": "off"
-        }
-    })
+  }),
+  {
+    files: ["*.config.js", "*.config.ts", "*.config.mjs"],
+    rules: {
+      "@typescript-eslint/no-require-imports": "off",
+      "no-undef": "off",
+    },
+  },
 ];
