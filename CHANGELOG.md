@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.6...v1.1.7) (2025-12-16)
+
+
+### Bug Fixes
+
+* **a11y:** add hidden DialogTitle to CommandDialog ([cf3a803](https://github.com/rjdmacedo/curriculum-vitae/commit/cf3a80355b4b12e138654ba7a8f79d1b2d48b76d))
+
 ## [1.1.6](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.5...v1.1.6) (2025-12-16)
 
 
