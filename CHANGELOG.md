@@ -1,3 +1,11 @@
+## [1.1.5](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.4...v1.1.5) (2025-12-16)
+
+
+### Bug Fixes
+
+* disable basePath on Vercel deployments ([c7cf728](https://github.com/rjdmacedo/curriculum-vitae/commit/c7cf728e3fc48be2f27f4ed749ba84ce42a5c102))
+* restore resolutions to fix Vercel build ([1ac4496](https://github.com/rjdmacedo/curriculum-vitae/commit/1ac4496a0605f8fa5c6bce53792e8fb265692a7a))
+
 ## [1.1.4](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.3...v1.1.4) (2025-12-12)
 
 ### Bug Fixes
