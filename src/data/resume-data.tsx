@@ -1,8 +1,6 @@
 import { PolygonLogo, SIIOPLogo } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
-
-
 export const RESUME_DATA = {
   name: "Rafael Macedo",
   initials: "RM",
