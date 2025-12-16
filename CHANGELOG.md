@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.5...v1.1.6) (2025-12-16)
+
+
+### Bug Fixes
+
+* add value prop to CommandItem to fix selection in cmdk v1 ([c6284dd](https://github.com/rjdmacedo/curriculum-vitae/commit/c6284dd34ed337f6c9d794cc5122b8b83d4d3cfa))
+
 ## [1.1.5](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.4...v1.1.5) (2025-12-16)
 
 
