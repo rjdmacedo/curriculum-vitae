@@ -1,8 +1,6 @@
 import { PolygonLogo, SIIOPLogo } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
-const now = new Date().getFullYear();
-
 export const RESUME_DATA = {
   name: "Rafael Macedo",
   initials: "RM",
@@ -173,12 +171,7 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "Headless SDK",
-      techStack: [
-        "Node",
-        "GraphQL",
-        "JavaScript",
-        "Apollo Federation",
-      ],
+      techStack: ["Node", "GraphQL", "JavaScript", "Apollo Federation"],
       description:
         "A versatile SDK enabling the creation of headless eCommerce solutions with any backend architecture.",
     },

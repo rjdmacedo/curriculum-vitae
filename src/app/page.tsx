@@ -8,13 +8,6 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -23,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div className="flex flex-col-reverse items-center gap-4 md:flex-row md:justify-between">
           <div className="flex-1 space-y-1.5">
@@ -100,15 +93,19 @@ export default function Page() {
           </Avatar>
         </div>
         <Section>
-          <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.about}</h2>
+          <h2 className="text-xl font-bold">
+            {RESUME_DATA.ui.sectionHeaders.about}
+          </h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground ">
             {RESUME_DATA.summary}
           </p>
         </Section>
         {RESUME_DATA.articles.length > 0 && (
           <Section className="scroll-mb-16">
-            <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.articles}</h2>
-            <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-2">
+            <h2 className="text-xl font-bold">
+              {RESUME_DATA.ui.sectionHeaders.articles}
+            </h2>
+            <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-2 print:grid-cols-3 print:gap-2">
               {RESUME_DATA.articles.map((article) => (
                 <ProjectCard
                   key={article.title}
@@ -122,7 +119,9 @@ export default function Page() {
           </Section>
         )}
         <Section>
-          <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.work}</h2>
+          <h2 className="text-xl font-bold">
+            {RESUME_DATA.ui.sectionHeaders.work}
+          </h2>
           {RESUME_DATA.work.map((work) => (
             <Card key={work.company}>
               <CardHeader>
@@ -171,7 +170,9 @@ export default function Page() {
           ))}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.education}</h2>
+          <h2 className="text-xl font-bold">
+            {RESUME_DATA.ui.sectionHeaders.education}
+          </h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
@@ -191,7 +192,9 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.skills}</h2>
+          <h2 className="text-xl font-bold">
+            {RESUME_DATA.ui.sectionHeaders.skills}
+          </h2>
           <div className="flex flex-col gap-y-3">
             {RESUME_DATA.skills.map((skillGroup) => (
               <div key={skillGroup.category} className="flex flex-col gap-y-2">
@@ -208,8 +211,10 @@ export default function Page() {
           </div>
         </Section>
         <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">{RESUME_DATA.ui.sectionHeaders.projects}</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-2">
+          <h2 className="text-xl font-bold">
+            {RESUME_DATA.ui.sectionHeaders.projects}
+          </h2>
+          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-2 print:grid-cols-3 print:gap-2">
             {RESUME_DATA.projects.map((project) => (
               <ProjectCard
                 key={project.title}
