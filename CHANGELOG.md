@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.7...v1.1.8) (2025-12-17)
+
+
+### Bug Fixes
+
+* update route types import path and clean up package.json dependencies ([f5438ad](https://github.com/rjdmacedo/curriculum-vitae/commit/f5438ad2909c8cb037b301a4f5ced11aa2b8a751))
+
 ## [1.1.7](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.6...v1.1.7) (2025-12-16)
 
 ### Bug Fixes
