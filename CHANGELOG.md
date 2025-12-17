@@ -1,24 +1,21 @@
 ## [1.1.7](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.6...v1.1.7) (2025-12-16)
 
-
 ### Bug Fixes
 
-* **a11y:** add hidden DialogTitle to CommandDialog ([cf3a803](https://github.com/rjdmacedo/curriculum-vitae/commit/cf3a80355b4b12e138654ba7a8f79d1b2d48b76d))
+- **a11y:** add hidden DialogTitle to CommandDialog ([cf3a803](https://github.com/rjdmacedo/curriculum-vitae/commit/cf3a80355b4b12e138654ba7a8f79d1b2d48b76d))
 
 ## [1.1.6](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.5...v1.1.6) (2025-12-16)
 
-
 ### Bug Fixes
 
-* add value prop to CommandItem to fix selection in cmdk v1 ([c6284dd](https://github.com/rjdmacedo/curriculum-vitae/commit/c6284dd34ed337f6c9d794cc5122b8b83d4d3cfa))
+- add value prop to CommandItem to fix selection in cmdk v1 ([c6284dd](https://github.com/rjdmacedo/curriculum-vitae/commit/c6284dd34ed337f6c9d794cc5122b8b83d4d3cfa))
 
 ## [1.1.5](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.4...v1.1.5) (2025-12-16)
 
-
 ### Bug Fixes
 
-* disable basePath on Vercel deployments ([c7cf728](https://github.com/rjdmacedo/curriculum-vitae/commit/c7cf728e3fc48be2f27f4ed749ba84ce42a5c102))
-* restore resolutions to fix Vercel build ([1ac4496](https://github.com/rjdmacedo/curriculum-vitae/commit/1ac4496a0605f8fa5c6bce53792e8fb265692a7a))
+- disable basePath on Vercel deployments ([c7cf728](https://github.com/rjdmacedo/curriculum-vitae/commit/c7cf728e3fc48be2f27f4ed749ba84ce42a5c102))
+- restore resolutions to fix Vercel build ([1ac4496](https://github.com/rjdmacedo/curriculum-vitae/commit/1ac4496a0605f8fa5c6bce53792e8fb265692a7a))
 
 ## [1.1.4](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.3...v1.1.4) (2025-12-12)
 

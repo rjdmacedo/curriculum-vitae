@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+# Run Prettier (check only) and ESLint before committing
+yarn prettier
+yarn lint

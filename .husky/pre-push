@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Ensure the project builds before pushing
+yarn build
