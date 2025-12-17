@@ -55,9 +55,9 @@ export const CommandMenu = ({ links }: Props) => {
 
   return (
     <>
-      <p className="fixed bottom-0 left-0 right-0 hidden border-t border-t-muted bg-white p-1 text-center text-sm text-muted-foreground xl:block print:hidden">
+      <p className="border-t-muted text-muted-foreground fixed bottom-0 left-0 right-0 hidden border-t bg-white p-1 text-center text-sm xl:block print:hidden">
         {RESUME_DATA.ui.commandMenu.open.beforeCmd}{" "}
-        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+        <kbd className="bg-muted text-muted-foreground pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100">
           <span className="text-xs">{RESUME_DATA.ui.commandMenu.open.cmd}</span>
         </kbd>{" "}
         {RESUME_DATA.ui.commandMenu.open.afterCmd}
@@ -109,7 +109,7 @@ export const CommandMenu = ({ links }: Props) => {
           </CommandGroup>
           <CommandSeparator />
         </CommandList>
-        <div className="py-2 text-center text-xs text-muted-foreground">
+        <div className="text-muted-foreground py-2 text-center text-xs">
           v{version}
         </div>
       </CommandDialog>

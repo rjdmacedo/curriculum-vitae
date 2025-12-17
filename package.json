@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "prettier": "prettier --check .",
     "prettier:write": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "resolutions": {
     "@radix-ui/react-accordion": "1.2.12",

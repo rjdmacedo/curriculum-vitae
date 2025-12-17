@@ -17,14 +17,14 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:max-w-full print:p-8">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-background print:max-w-none print:space-y-6">
+      <section className="bg-background mx-auto w-full max-w-2xl space-y-8 print:max-w-none print:space-y-6">
         <div className="flex flex-col-reverse items-center gap-4 md:flex-row md:justify-between">
           <div className="w-full space-y-1.5 md:flex-1">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground ">
+            <p className="text-muted-foreground max-w-md text-pretty font-mono text-sm ">
               {RESUME_DATA.about}
             </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+            <p className="text-muted-foreground max-w-md items-center text-pretty font-mono text-xs">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={RESUME_DATA.locationLink}
@@ -34,7 +34,7 @@ export default function Page() {
                 {RESUME_DATA.location}
               </a>
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="text-muted-foreground flex gap-x-1 pt-1 font-mono text-sm print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
                   className="size-8"
@@ -73,7 +73,7 @@ export default function Page() {
                 </Button>
               ))}
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+            <div className="text-muted-foreground hidden flex-col gap-x-1 font-mono text-sm print:flex">
               {RESUME_DATA.contact.email ? (
                 <a href={`mailto:${RESUME_DATA.contact.email}`}>
                   <span className="underline">{RESUME_DATA.contact.email}</span>
@@ -96,7 +96,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">
             {RESUME_DATA.ui.sectionHeaders.about}
           </h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground ">
+          <p className="text-muted-foreground text-pretty font-mono text-sm ">
             {RESUME_DATA.summary}
           </p>
         </Section>
@@ -198,7 +198,7 @@ export default function Page() {
           <div className="flex flex-col gap-y-3">
             {RESUME_DATA.skills.map((skillGroup) => (
               <div key={skillGroup.category} className="flex flex-col gap-y-2">
-                <h3 className="text-sm font-semibold text-muted-foreground">
+                <h3 className="text-muted-foreground text-sm font-semibold">
                   {skillGroup.category}
                 </h3>
                 <div className="flex flex-wrap gap-1">
