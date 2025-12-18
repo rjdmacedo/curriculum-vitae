@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.8...v1.2.0) (2025-12-18)
+
+
+### Features
+
+* **analytics:** add GA4 custom events for command menu ([130e454](https://github.com/rjdmacedo/curriculum-vitae/commit/130e454ed465f74caa2791d83bdd9ff58803ef27))
+
 ## [1.1.8](https://github.com/rjdmacedo/curriculum-vitae/compare/v1.1.7...v1.1.8) (2025-12-17)
 
 
