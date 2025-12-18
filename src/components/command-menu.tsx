@@ -31,7 +31,18 @@ export const CommandMenu = ({ links }: Props) => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
-        setOpen((open) => !open);
+        setOpen((open) => {
+          const newOpen = !open;
+
+          if (!open && newOpen) {
+            // Track opening the command menu via keyboard shortcut
+            sendGAEvent("event", "open_command_menu", {
+              source: "hotkey_cmd_j",
+            });
+          }
+
+          return newOpen;
+        });
       }
     };
 
@@ -50,7 +61,18 @@ export const CommandMenu = ({ links }: Props) => {
   }, [open, shouldPrint]);
 
   function handleCommandButtonClick() {
-    setOpen((open) => !open);
+    setOpen((open) => {
+      const newOpen = !open;
+
+      if (!open && newOpen) {
+        // Track opening the command menu via button click
+        sendGAEvent("event", "open_command_menu", {
+          source: "click_command_menu_button",
+        });
+      }
+
+      return newOpen;
+    });
   }
 
   return (
@@ -79,7 +101,9 @@ export const CommandMenu = ({ links }: Props) => {
               value="print"
               onSelect={() => {
                 setShouldPrint(true);
-                sendGAEvent({ event: "print", source: "command_menu" });
+                sendGAEvent("event", "print", {
+                  source: "click_print",
+                });
                 setOpen(false);
               }}
             >
@@ -95,8 +119,7 @@ export const CommandMenu = ({ links }: Props) => {
                 onSelect={() => {
                   setOpen(false);
                   // Track command menu link clicked
-                  sendGAEvent({
-                    event: "click_link",
+                  sendGAEvent("event", "click_link", {
                     link_url: url,
                     link_text: title,
                   });
