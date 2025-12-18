@@ -8,6 +8,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -25,14 +26,15 @@ export default function Page() {
               {RESUME_DATA.about}
             </p>
             <p className="text-muted-foreground max-w-md items-center text-pretty font-mono text-xs">
-              <a
+              <TrackedLink
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={RESUME_DATA.locationLink}
+                trackingText={RESUME_DATA.location}
                 target="_blank"
               >
                 <GlobeIcon className="size-3" />
                 {RESUME_DATA.location}
-              </a>
+              </TrackedLink>
             </p>
             <div className="text-muted-foreground flex gap-x-1 pt-1 font-mono text-sm print:hidden">
               {RESUME_DATA.contact.email ? (
@@ -42,9 +44,12 @@ export default function Page() {
                   size="icon"
                   asChild
                 >
-                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                  <TrackedLink
+                    href={`mailto:${RESUME_DATA.contact.email}`}
+                    trackingText="email"
+                  >
                     <MailIcon className="size-4" />
-                  </a>
+                  </TrackedLink>
                 </Button>
               ) : null}
               {RESUME_DATA.contact.tel ? (
@@ -54,9 +59,12 @@ export default function Page() {
                   size="icon"
                   asChild
                 >
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                  <TrackedLink
+                    href={`tel:${RESUME_DATA.contact.tel}`}
+                    trackingText="phone"
+                  >
                     <PhoneIcon className="size-4" />
-                  </a>
+                  </TrackedLink>
                 </Button>
               ) : null}
               {RESUME_DATA.contact.social.map((social) => (
@@ -67,22 +75,28 @@ export default function Page() {
                   size="icon"
                   asChild
                 >
-                  <a href={social.url}>
+                  <TrackedLink href={social.url} trackingText={social.name}>
                     <social.icon className="size-4" />
-                  </a>
+                  </TrackedLink>
                 </Button>
               ))}
             </div>
             <div className="text-muted-foreground hidden flex-col gap-x-1 font-mono text-sm print:flex">
               {RESUME_DATA.contact.email ? (
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                <TrackedLink
+                  href={`mailto:${RESUME_DATA.contact.email}`}
+                  trackingText="email"
+                >
                   <span className="underline">{RESUME_DATA.contact.email}</span>
-                </a>
+                </TrackedLink>
               ) : null}
               {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                <TrackedLink
+                  href={`tel:${RESUME_DATA.contact.tel}`}
+                  trackingText="phone"
+                >
                   <span className="underline">{RESUME_DATA.contact.tel}</span>
-                </a>
+                </TrackedLink>
               ) : null}
             </div>
           </div>
@@ -127,9 +141,13 @@ export default function Page() {
               <CardHeader>
                 <div className="flex items-center justify-between gap-x-2 text-base">
                   <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                    <a className="hover:underline" href={work.link}>
+                    <TrackedLink
+                      className="hover:underline"
+                      href={work.link}
+                      trackingText={work.company}
+                    >
                       {work.company}
-                    </a>
+                    </TrackedLink>
 
                     <span className="inline-flex gap-x-1">
                       {work.badges.map((badge) => (

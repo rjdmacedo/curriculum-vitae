@@ -101,7 +101,7 @@ export const CommandMenu = ({ links }: Props) => {
               value="print"
               onSelect={() => {
                 setShouldPrint(true);
-                sendGAEvent("event", "print", {
+                sendGAEvent("event", "command_menu_print", {
                   source: "click_print",
                 });
                 setOpen(false);

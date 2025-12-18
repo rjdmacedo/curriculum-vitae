@@ -7,6 +7,7 @@ import {
 } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Link as LinkIcon } from "lucide-react";
+import { TrackedLink } from "./tracked-link";
 
 interface Props {
   title: string;
@@ -22,8 +23,9 @@ export function ProjectCard({ title, description, tags, link }: Props) {
         <div className="space-y-1">
           <CardTitle className="text-base">
             {link ? (
-              <a
+              <TrackedLink
                 href={link}
+                trackingText={title}
                 target="_blank"
                 className="inline-flex items-center gap-1 hover:underline"
               >
@@ -34,7 +36,7 @@ export function ProjectCard({ title, description, tags, link }: Props) {
                   <LinkIcon className="size-3" />
                 </Badge>
                 {title}
-              </a>
+              </TrackedLink>
             ) : (
               title
             )}
