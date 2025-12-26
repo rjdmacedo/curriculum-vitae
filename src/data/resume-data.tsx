@@ -1,4 +1,4 @@
-import { PolygonLogo, SIIOPLogo } from "@/images/logos";
+import { AlokaiLogo, BiometridLogo, FarfetchLogo, SIIOPLogo } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
@@ -13,7 +13,7 @@ export const RESUME_DATA = {
   ui: {
     sectionHeaders: {
       about: "About",
-      articles: "Articles",
+      articles: "Published Articles",
       work: "Work Experience",
       education: "Education",
       skills: "Skills",
@@ -81,20 +81,22 @@ export const RESUME_DATA = {
       ],
       description:
         "Architected and delivered the comprehensive integration between Vue Storefront and Elastic Path, establishing a seamless e-commerce ecosystem. Engineered a robust abstraction layer using composables, significantly reducing code complexity and accelerating developer velocity. Spearheaded the technical collaboration with the Elastic Path engineering team, resolving critical bottlenecks to ensure a smooth launch. Served as the primary technical liaison, facilitating efficient data synchronization strategies. Led the end-to-end project lifecycle, managing stakeholder expectations and enforcing rigorous Agile practices to guarantee high-quality delivery.",
+      logo: AlokaiLogo,
     },
     {
       company: "Farfetch",
       link: "https://farfetch.com/",
-      badges: [],
+      badges: ["On Site"],
       title: "Senior Software Engineer",
       start: "2018",
       end: "2021",
       techStack: ["React", "Redux", "TypeScript", "Node.js", "Jest"],
       description:
         "Spearheaded the design and implementation of scalable UI components in React, driving consistency across the platform. Optimized application performance and stability by integrating Sentry and New Relic, resulting in reduced downtime and faster load times. Leveraged data-driven insights to refine frontend architecture and enhance user engagement. Expanded the internal UI library for the A/B Testing tool, promoting code reusability and design uniformity. Championed best practices in code quality, including comprehensive testing and adherence to DRY principles, within a fast-paced Kanban environment.",
+      logo: FarfetchLogo,
     },
     {
-      company: "Polygon",
+      company: "Biometrid",
       link: "https://biometrid.com/",
       badges: ["Hybrid"],
       title: "Senior Software Engineer",
@@ -103,11 +105,12 @@ export const RESUME_DATA = {
       techStack: ["JavaScript", "HTML/CSS", "Unit Testing", "Jest", "Cypress"],
       description:
         "Engineered a JavaScript-based Biometric SDK, enabling third-party developers to seamlessly verify user identities. Established a rigorous testing framework using Jest and Cypress, elevating code reliability and maintainability. Implemented Agile workflows to streamline feature delivery and enhance team collaboration.",
+      logo: BiometridLogo,
     },
     {
       company: "Alter Solutions",
       link: "https://www.alter-solutions.pt/",
-      badges: [],
+      badges: ["On Site"],
       title: "Software Engineer",
       start: "2016",
       end: "2018",
@@ -118,37 +121,61 @@ export const RESUME_DATA = {
   ],
   skills: [
     {
-      category: "Languages",
-      items: ["TypeScript", "JavaScript", "HTML/CSS"],
+      category: "✍️ Languages",
+      items: ["TypeScript", "JavaScript", "HTML/CSS", "Sass/SCSS"],
     },
     {
-      category: "Frontend Frameworks",
+      category: "🚀 Frontend Frameworks",
       items: ["React", "Next.js", "Remix", "Vue.js", "Nuxt.js"],
     },
     {
-      category: "Backend & Data",
-      items: ["Node.js", "GraphQL", "Prisma", "Laravel", "Apollo GraphQL"],
+      category: "📦 State Management & Data Fetching",
+      items: [
+        "TanStack Query",
+        "Redux",
+        "Zustand",
+        "Pinia",
+        "Apollo GraphQL",
+        "tRPC",
+      ],
     },
     {
-      category: "UI & Styling",
+      category: "🎨 UI & Styling",
       items: [
         "Tailwind CSS",
-        "Material UI",
-        "Ant Design",
-        "Vuetify",
+        "Framer Motion",
+        "Radix UI",
+        "Shadcn/UI",
+        "Storybook",
         "Styled Components",
       ],
     },
     {
-      category: "Tools & Concepts",
+      category: "⚙️ Backend & Data",
+      items: ["Node.js", "GraphQL", "Prisma", "PostgreSQL", "Laravel"],
+    },
+    {
+      category: "🛠️ Tools & Testing",
       items: [
+        "Vite",
+        "Vitest",
         "Jest",
+        "Playwright",
         "Cypress",
         "Git",
         "Docker",
-        "SEO",
+      ],
+    },
+    {
+      category: "🧠 Concepts",
+      items: [
+        "Internationalization (i18n)",
+        "CI/CD",
+        "GitHub Actions",
+        "Performance Optimization",
+        "Accessibility (A11y)",
         "Design Patterns",
-        "REST API",
+        "SEO",
       ],
     },
   ],
@@ -172,20 +199,31 @@ export const RESUME_DATA = {
     {
       title: "Headless SDK",
       techStack: ["Node", "GraphQL", "JavaScript", "Apollo Federation"],
+      link: {
+        href: "https://alokai.com/product/connect",
+      },
       description:
         "A versatile SDK enabling the creation of headless eCommerce solutions with any backend architecture.",
+      logo: AlokaiLogo,
     },
     {
       title: "GDPR Compliance",
       techStack: ["JavaScript", "React", "C#"],
+      link: {
+        href: "https://www.farfetch.com",
+      },
       description:
         "Developed a comprehensive tool facilitating automated GDPR compliance for enterprise organizations.",
+      logo: FarfetchLogo,
     },
     {
       title: "SIIOP",
       techStack: ["Vue", "Laravel", "MySQL", "Docker", "Apache", "Gulp"],
+      link: {
+        href: "https://www.gnr.pt",
+      },
       description:
-        "A robust management and monitoring system deployed for the Portuguese Police force.",
+        "SIIOP (aka Sistema Integrado de Informações Operacionais de Polícia) is a mission-critical management and monitoring system used internally by GNR (Guarda Nacional Republicana) officers for operational police information and coordination.",
       logo: SIIOPLogo,
     },
     {
@@ -197,7 +235,7 @@ export const RESUME_DATA = {
       },
       description:
         "A proprietary identity verification platform utilizing facial, voice, and ID recognition, managed from inception to production deployment.",
-      logo: PolygonLogo,
+      logo: BiometridLogo,
     },
   ],
 } as const;

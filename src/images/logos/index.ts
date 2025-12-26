@@ -1,4 +1,6 @@
 import SIIOPLogo from "./SIIOP.jpg";
-import PolygonLogo from "./polygon.jpeg";
+import BiometridLogo from "./polygon.jpeg";
+import AlokaiLogo from "./alokai.png";
+import FarfetchLogo from "./farfetch.png";
 
-export { SIIOPLogo, PolygonLogo };
+export { SIIOPLogo, BiometridLogo, AlokaiLogo, FarfetchLogo };
