@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Image from "next/image";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
@@ -110,7 +111,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">
             {RESUME_DATA.ui.sectionHeaders.about}
           </h2>
-          <p className="text-muted-foreground text-pretty font-mono text-sm ">
+          <p className="text-muted-foreground text-pretty text-justify font-mono text-sm leading-relaxed">
             {RESUME_DATA.summary}
           </p>
         </Section>
@@ -137,10 +138,19 @@ export default function Page() {
             {RESUME_DATA.ui.sectionHeaders.work}
           </h2>
           {RESUME_DATA.work.map((work) => (
-            <Card key={work.company}>
-              <CardHeader>
+            <Card key={work.company} className="p-4">
+              <CardHeader className="p-0 pb-1">
                 <div className="flex items-center justify-between gap-x-2 text-base">
                   <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                    {"logo" in work && work.logo && (
+                      <Image
+                        src={work.logo}
+                        alt={`${work.company} logo`}
+                        width={24}
+                        height={24}
+                        className="mr-1 size-6 shrink-0 rounded-md object-contain"
+                      />
+                    )}
                     <TrackedLink
                       className="hover:underline"
                       href={work.link}
@@ -168,7 +178,7 @@ export default function Page() {
 
                 <h4 className="font-mono text-sm leading-none">{work.title}</h4>
               </CardHeader>
-              <CardContent className="mt-2 text-xs ">
+              <CardContent className="text-muted-foreground mt-1 text-pretty p-0 text-justify font-mono text-xs leading-relaxed">
                 {work.description}
                 {work.techStack && (
                   <div className="mt-2 flex flex-wrap gap-1">
@@ -193,8 +203,8 @@ export default function Page() {
           </h2>
           {RESUME_DATA.education.map((education) => {
             return (
-              <Card key={education.school}>
-                <CardHeader>
+              <Card key={education.school} className="p-4">
+                <CardHeader className="p-0 pb-1">
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">
                       {education.school}
@@ -204,7 +214,9 @@ export default function Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="text-muted-foreground mt-1 text-pretty p-0 text-justify font-mono text-sm leading-relaxed">
+                  {education.degree}
+                </CardContent>
               </Card>
             );
           })}
@@ -240,6 +252,7 @@ export default function Page() {
                 description={project.description}
                 tags={project.techStack}
                 link={"link" in project ? project.link.href : undefined}
+                logo={"logo" in project ? project.logo : undefined}
               />
             ))}
           </div>

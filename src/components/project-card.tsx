@@ -1,3 +1,4 @@
+import Image, { StaticImageData } from "next/image";
 import {
   Card,
   CardHeader,
@@ -14,14 +15,24 @@ interface Props {
   description: string;
   tags: readonly string[];
   link?: string;
+  logo?: StaticImageData;
 }
 
-export function ProjectCard({ title, description, tags, link }: Props) {
+export function ProjectCard({ title, description, tags, link, logo }: Props) {
   return (
     <Card className="border-muted flex flex-col overflow-hidden border p-3">
-      <CardHeader className="">
+      <CardHeader className="p-0">
         <div className="space-y-1">
-          <CardTitle className="text-base">
+          <CardTitle className="flex items-center gap-2 text-base">
+            {logo && (
+              <Image
+                src={logo}
+                alt={`${title} logo`}
+                width={24}
+                height={24}
+                className="size-6 shrink-0 rounded-md object-contain"
+              />
+            )}
             {link ? (
               <TrackedLink
                 href={link}
@@ -29,13 +40,13 @@ export function ProjectCard({ title, description, tags, link }: Props) {
                 target="_blank"
                 className="inline-flex items-center gap-1 hover:underline"
               >
+                {title}
                 <Badge
                   className="bg-blue-100 px-1 text-[10px] text-blue-600 hover:bg-blue-200"
                   variant="secondary"
                 >
                   <LinkIcon className="size-3" />
                 </Badge>
-                {title}
               </TrackedLink>
             ) : (
               title
@@ -49,8 +60,8 @@ export function ProjectCard({ title, description, tags, link }: Props) {
           </CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex">
-        <div className="mt-2 flex flex-wrap gap-1">
+      <CardContent className="mt-auto flex p-0">
+        <div className="mt-3 flex flex-wrap gap-1">
           {tags.map((tag) => (
             <Badge
               className="px-1 py-0 text-[10px]"
