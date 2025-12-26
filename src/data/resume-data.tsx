@@ -1,4 +1,9 @@
-import { AlokaiLogo, BiometridLogo, FarfetchLogo, SIIOPLogo } from "@/images/logos";
+import {
+  AlokaiLogo,
+  BiometridLogo,
+  FarfetchLogo,
+  SIIOPLogo,
+} from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {

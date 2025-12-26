@@ -111,7 +111,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">
             {RESUME_DATA.ui.sectionHeaders.about}
           </h2>
-          <p className="text-muted-foreground text-pretty font-mono text-sm leading-relaxed text-justify">
+          <p className="text-muted-foreground text-pretty text-justify font-mono text-sm leading-relaxed">
             {RESUME_DATA.summary}
           </p>
         </Section>
@@ -139,7 +139,7 @@ export default function Page() {
           </h2>
           {RESUME_DATA.work.map((work) => (
             <Card key={work.company} className="p-4">
-              <CardHeader className="pb-1 p-0">
+              <CardHeader className="p-0 pb-1">
                 <div className="flex items-center justify-between gap-x-2 text-base">
                   <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                     {"logo" in work && work.logo && (
@@ -178,7 +178,7 @@ export default function Page() {
 
                 <h4 className="font-mono text-sm leading-none">{work.title}</h4>
               </CardHeader>
-              <CardContent className="text-muted-foreground mt-1 p-0 text-pretty font-mono text-xs leading-relaxed text-justify">
+              <CardContent className="text-muted-foreground mt-1 text-pretty p-0 text-justify font-mono text-xs leading-relaxed">
                 {work.description}
                 {work.techStack && (
                   <div className="mt-2 flex flex-wrap gap-1">
@@ -204,7 +204,7 @@ export default function Page() {
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school} className="p-4">
-                <CardHeader className="pb-1 p-0">
+                <CardHeader className="p-0 pb-1">
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">
                       {education.school}
@@ -214,7 +214,7 @@ export default function Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="text-muted-foreground mt-1 p-0 text-pretty font-mono text-sm leading-relaxed text-justify">
+                <CardContent className="text-muted-foreground mt-1 text-pretty p-0 text-justify font-mono text-sm leading-relaxed">
                   {education.degree}
                 </CardContent>
               </Card>
