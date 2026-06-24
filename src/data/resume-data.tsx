@@ -77,6 +77,7 @@ export const RESUME_DATA = {
       start: "2021",
       end: "Present",
       techStack: [
+        "React",
         "Vue.js",
         "Nuxt.js",
         "TypeScript",
@@ -97,7 +98,7 @@ export const RESUME_DATA = {
       end: "2021",
       techStack: ["React", "Redux", "TypeScript", "Node.js", "Jest"],
       description:
-        "Spearheaded the design and implementation of scalable UI components in React, driving consistency across the platform. Optimized application performance and stability by integrating Sentry and New Relic, resulting in reduced downtime and faster load times. Leveraged data-driven insights to refine frontend architecture and enhance user engagement. Expanded the internal UI library for the A/B Testing tool, promoting code reusability and design uniformity. Championed best practices in code quality, including comprehensive testing and adherence to DRY principles, within a fast-paced Kanban environment.",
+        "Owned the technical implementation of a centralized consent management solution governing analytics, personalization, A/B testing, and advertising tracking under GDPR. Designed and delivered a shared TypeScript library to encode and decode user consent preferences, adopted by React applications and backend services to enforce consistent tracking decisions platform-wide. Propagated consent via cookies and request headers, enabling backend services to honor user preferences at decision time. Spearheaded scalable UI component design in React and expanded the internal UI library for the A/B Testing tool. Optimized application performance by integrating Sentry and New Relic, and championed best practices in code quality within a fast-paced Kanban environment.",
       logo: FarfetchLogo,
     },
     {
@@ -212,13 +213,13 @@ export const RESUME_DATA = {
       logo: AlokaiLogo,
     },
     {
-      title: "GDPR Compliance",
-      techStack: ["JavaScript", "React", "C#"],
+      title: "Consent Management",
+      techStack: ["TypeScript", "React", "Node.js"],
       link: {
         href: "https://www.farfetch.com",
       },
       description:
-        "Developed a comprehensive tool facilitating automated GDPR compliance for enterprise organizations.",
+        "Shared TypeScript library encoding user consent preferences in cookies, enabling consistent GDPR-compliant tracking decisions across React applications and backend services.",
       logo: FarfetchLogo,
     },
     {
